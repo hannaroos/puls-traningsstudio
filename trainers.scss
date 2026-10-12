@@ -1,59 +1,93 @@
-
-
 @use "variables" as *;
+@use "mixins" as *;
 
-body{
-    background:#14161B;
+body {
+  background: #14161b;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-    
-    .child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-        width: 100%;
-        max-width: 400px;
-        height: 500px;
-        background: #2A2E37;
-        border-radius: $border-radius-prime;
-        text-align: center;
-        
-        
-        img{
-            display: block;
-            width: 100%;
-            height: 50%;
-            object-fit: cover;
-            border-top-left-radius: $border-radius-prime;
-            border-top-right-radius: $border-radius-prime;
+  .child {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    background: #2a2e37;
+    border-radius: $border-radius-prime;
+    text-align: center;
 
-        }
-
-    .keyword{
-        border-radius: $border-radius-prime;
-        border: 1px solid $p-text-color;
-        color: $p-text-color;
-    }    
-    }
-    .child + .child{
-            margin-top: 20px;
-    }
-    h1{
-        color: $text-color;
-    }
-    p{
-        color: $p-text-color;
-    }
-    h2{
-        color: $text-color;
-    }
-    a{
-        color: $links-color;
-        text-decoration: none;
-        
+    img {
+      display: block;
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+      border-top-left-radius: $border-radius-prime;
+      border-top-right-radius: $border-radius-prime;
     }
 
+    .keyword {
+      border-radius: $border-radius-prime;
+      border: 1px solid $p-text-color;
+      color: $p-text-color;
+    }
+  }
+  .child + .child {
+    margin-top: 20px;
+  }
+  h1 {
+    color: $text-color;
+  }
+  p {
+    color: $p-text-color;
+  }
+  h2 {
+    color: $text-color;
+  }
+  a {
+    color: $links-color;
+    text-decoration: none;
+  }
+  
+  
 }
+.container-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: #2A2E37;
+    border-radius: $border-radius-prime;
+    margin-top: 20px;
+
+    .child-1{
+        text-align: center;
+        h2{
+            color: $text-color;
+        }
+        p{
+            color: $p-text-color;
+        }
+        .btn{
+            background-color: $button-color;
+            color: $text-color;
+            border-radius: $border-radius-prime;
+            padding: 10px 20px;
+            border: none;
+            
+        }
+    }
+}
+@include tablet {
+    .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+
+      .child {
+        margin: 10px;
+        width: calc(50% - 10px);
+      }
+    }
+  }
