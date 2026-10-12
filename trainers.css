@@ -1,5 +1,5 @@
 body {
-  background: #14161B;
+  background: #14161b;
 }
 
 .container {
@@ -11,7 +11,7 @@ body {
   width: 100%;
   max-width: 400px;
   height: 500px;
-  background: #2A2E37;
+  background: #2a2e37;
   border-radius: 8px;
   text-align: center;
 }
@@ -44,4 +44,43 @@ body {
 .container a {
   color: #FF8F5C;
   text-decoration: none;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #2A2E37;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.container-1 .child-1 {
+  text-align: center;
+}
+.container-1 .child-1 h2 {
+  color: #F2F3F5;
+}
+.container-1 .child-1 p {
+  color: #C9CCD3;
+}
+.container-1 .child-1 .btn {
+  background-color: #FF7A3D;
+  color: #F2F3F5;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .container .child {
+    margin: 10px;
+    width: calc(50% - 10px);
+  }
 }/*# sourceMappingURL=trainers.css.map */
