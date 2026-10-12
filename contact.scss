@@ -1,1 +1,8 @@
 @use "variables" as *;
+@use "mixins" as *;
+@use "header" as *;
+@use "footer" as *;
+
+h1 {
+    font-family: $rubrik-font;
+}

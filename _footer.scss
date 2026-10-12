@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+.footer {
+    display: flex;
+    justify-content: space-between; 
+    background-color: $box-color;
+    color: $text-secondary-color;
+    font-family: $body-font;
+    border-top: solid 1px $border-p-color;
+    padding: 10px 0px;
+
+    address {
+        align-self: center;
+        line-height: 1.8;
+    }
+
+    h2 {
+        font-family: $rubrik-font;
+        text-transform: uppercase;
+        color: $text-primary-color;
+    }
+
+    a {
+        color: $links-color;
+    }
+}

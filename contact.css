@@ -1,1 +1,25 @@
-/*# sourceMappingURL=contact.css.map */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1C1F26;
+  color: #C9CCD3;
+  font-family: "Barlow", sans-serif;
+  border-top: solid 1px #2A2E37;
+  padding: 10px 0px;
+}
+.footer address {
+  align-self: center;
+  line-height: 1.8;
+}
+.footer h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #F2F3F5;
+}
+.footer a {
+  color: #FF8F5C;
+}
+
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+}/*# sourceMappingURL=contact.css.map */
