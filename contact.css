@@ -20,6 +20,45 @@
   color: #FF8F5C;
 }
 
+body {
+  background-color: #14161B;
+  color: #C9CCD3;
+  font-family: "Barlow", sans-serif;
+}
+body a {
+  color: #FF8F5C;
+}
+
 h1 {
   font-family: "Barlow Condensed", sans-serif;
+  color: #F2F3F5;
+}
+
+.contact-info__map {
+  width: 350px;
+  height: 300px;
+}
+
+.contact-form {
+  padding: 20px;
+  background-color: #1C1F26;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form input, .contact-form textarea {
+  background-color: #14161B;
+  border: solid 1px #2A2E37;
+}
+.contact-form button {
+  background-color: #FF7A3D;
+  align-self: flex-start;
+  border: solid 1px #2A2E37;
+  padding: 10px;
+  border-radius: 8px;
 }/*# sourceMappingURL=contact.css.map */

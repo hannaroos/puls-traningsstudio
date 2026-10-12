@@ -3,6 +3,76 @@
 @use "header" as *;
 @use "footer" as *;
 
+body {
+    background-color: $bg-color;
+    color: $text-secondary-color;
+    font-family: $body-font;
+
+        a {
+            color: $links-color;
+        }
+}
 h1 {
     font-family: $rubrik-font;
+    color: $text-primary-color;
 }
+
+.contact-info {
+    &__map {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+.contact-form {
+    padding: 20px;
+    background-color: $box-color;
+    border-radius: $border-radius-prime;
+    display: flex;
+    flex-direction: column;
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;         
+        }
+
+            input, textarea {
+                background-color: $bg-color;
+                border: solid 1px $border-p-color;
+            }
+
+            button {
+                background-color: $button-color;
+                align-self: flex-start;
+                border: solid 1px $border-p-color;
+                padding: 10px;
+                border-radius: $border-radius-prime;
+            }
+}
+
+// Media queries mobile first
+
+// @media screen and (min-width:576px) {
+//     body {
+//         max-width: 576px;
+//     }
+// }
+
+// @media screen and (min-width:992px) {
+//     body {
+//         max-width: 992px;
+//     }
+// }
+
+// @media screen and (min-width:1200px) {
+//     body {
+//         max-width: 1200px;
+//     }
+// }
+
+// @media screen and (min-width:1536px) {
+//     body {
+//         max-width: 1536px;
+//     }
+// }
