@@ -1,8 +1,21 @@
 @use "variables" as *;
 @use "mixins" as *;
+@use "header" as *;
 
 body {
   background: #14161b;
+}
+.rubrik {
+  margin-bottom: 20px;
+  text-align: center;
+  h2 {
+    color: $text-primary-color;
+    font-family: $rubrik-font;
+  }
+  p {
+    color: $text-secondry-color;
+    font-family: $body-font;
+  }
 }
 .container {
   display: flex;
@@ -28,66 +41,104 @@ body {
 
     .keyword {
       border-radius: $border-radius-prime;
-      border: 1px solid $p-text-color;
-      color: $p-text-color;
+      border: 1px solid $text-secondry-color;
+      color: $text-secondry-color;
+      font-family: $body-font;
     }
   }
   .child + .child {
     margin-top: 20px;
   }
   h1 {
-    color: $text-color;
+    color: $text-primary-color;
+    font-family: $rubrik-font;
   }
   p {
-    color: $p-text-color;
+    color: $text-secondry-color;
+    font-family: $body-font;
   }
   h2 {
-    color: $text-color;
+    color: $text-primary-color;
+    font-family: $rubrik-font;
   }
   a {
     color: $links-color;
     text-decoration: none;
   }
-  
-  
 }
-.container-1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    background: #2A2E37;
-    border-radius: $border-radius-prime;
-    margin-top: 20px;
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #2a2e37;
+  border-radius: $border-radius-prime;
+  margin-top: 20px;
 
-    .child-1{
-        text-align: center;
-        h2{
-            color: $text-color;
-        }
-        p{
-            color: $p-text-color;
-        }
-        .btn{
-            background-color: $button-color;
-            color: $text-color;
-            border-radius: $border-radius-prime;
-            padding: 10px 20px;
-            border: none;
-            
-        }
+  .child-1 {
+    align-items: center;
+    h2 {
+      color: $text-primary-color;
+      font-family: $rubrik-font;
     }
+    p {
+      color: $text-secondry-color;
+      font-family: $body-font;
+    }
+    .btn {
+      background-color: $button-color;
+      color: $text-primary-color;
+      border-radius: $border-radius-prime;
+      padding: 10px 20px;
+      border: none;
+    }
+  }
 }
 @include tablet {
-    .container {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 
-      .child {
-        margin: 10px;
+    .child {
+      margin: 10px;
+      width: calc(50% - 10px);
+    }
+  }
+  .container-1 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .child-1 {
+      width: calc(50% - 10px);
+      align-items: center;
+    }
+  }
+}
+@include desktop {
+  .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .child {
+      width: calc(33.33% - 10px);
+    }
+
+    .container-1 {
+      flex-direction: column;
+
+      align-items: center;
+      padding: 20px;
+
+      .child-1 {
         width: calc(50% - 10px);
+        align-items: center;
       }
     }
   }
+  .rubrik {
+    text-align: left;
+  }
+}
