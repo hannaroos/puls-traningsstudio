@@ -18,10 +18,27 @@ h1 {
 }
 
 .contact-info {
+    
+    address {
+        line-height: 1.8;        
+    }
+    
     &__map {
         width: 350px;
         height: 300px;
+        padding: 20px 0;
     }
+
+        &__opening {
+            border-top: solid 1px $border-p-color; 
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            line-height: 1.8;
+        }
+
+            span {
+                border-bottom: solid 1px $border-p-color; 
+            }
 }
 
 .contact-form {
@@ -34,12 +51,13 @@ h1 {
         &__form {
             display: flex;
             flex-direction: column;
-            gap: 10px;         
-        }
+            gap: 10px;    
+        }          
 
             input, textarea {
                 background-color: $bg-color;
                 border: solid 1px $border-p-color;
+                accent-color: $button-color;
             }
 
             button {
