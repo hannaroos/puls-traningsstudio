@@ -1,0 +1,87 @@
+header {
+    display: flex;
+    
+    position: sticky;
+    top:0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px $border-p-color;
+    height: 80px;
+  nav {
+    display: flex;
+    
+    
+    
+
+    summary {
+      color: black;
+      background: $button-color;
+      border-radius: $border-radius-prime;
+      list-style: none;
+      font-size: 25px;
+      font-family: $rubrik-font;
+      height: 40px;
+      width: 90px;
+      padding-top: 0px;
+      padding-left: 10px;
+      
+      
+
+    }
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    details[open] > summary {
+        font-size: 0;
+      box-sizing: border-box;
+      display: flex;
+      
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      width: 20px;
+      padding: 0;
+      justify-self: end;
+      
+        &::after {
+            content: "x";
+        font-size: 20px;
+        line-height: 5;
+        }
+    }
+    a {
+      color: $links-color;
+      text-decoration: none;
+      
+      margin: 5px;
+      justify-self: auto;
+      
+      
+    }
+  }
+  .logo{
+    display: flex;
+    
+    h1{
+        color: $text-primary-color;
+        font-family: $body-font;
+        position: absolute;
+        top: -5px;
+        left: 60px;
+        
+
+    }
+    svg{
+        color:$button-color ;
+        position: absolute;
+        top: 25px;
+        
+        width: 50px;
+    }
+  }
+}
+header nav{
+    display: flex;
+    align-items:center;
+    margin-top: 20px;
+}
