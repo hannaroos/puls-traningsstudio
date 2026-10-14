@@ -1,9 +1,10 @@
 @use "variables" as *;
 @use "mixins" as *;
 @use "header" as *;
+@use "footer" as *;
 
 body {
-  background: #14161b;
+  background: $bg-color;
 }
 .rubrik {
   margin-bottom: 20px;
@@ -13,7 +14,7 @@ body {
     font-family: $rubrik-font;
   }
   p {
-    color: $text-secondry-color;
+    color: $text-secondary-color;
     font-family: $body-font;
   }
 }
@@ -26,7 +27,7 @@ body {
     width: 100%;
     max-width: 400px;
     height: 500px;
-    background: #2a2e37;
+    background: $box-color;
     border-radius: $border-radius-prime;
     text-align: center;
 
@@ -41,8 +42,8 @@ body {
 
     .keyword {
       border-radius: $border-radius-prime;
-      border: 1px solid $text-secondry-color;
-      color: $text-secondry-color;
+      border: 1px solid $text-secondary-color;
+      color: $text-secondary-color;
       font-family: $body-font;
     }
   }
@@ -54,7 +55,7 @@ body {
     font-family: $rubrik-font;
   }
   p {
-    color: $text-secondry-color;
+    color: $text-secondary-color;
     font-family: $body-font;
   }
   h2 {
@@ -74,6 +75,7 @@ body {
   background: #2a2e37;
   border-radius: $border-radius-prime;
   margin-top: 20px;
+  flex-direction: column;
 
   .child-1 {
     align-items: center;
@@ -82,7 +84,7 @@ body {
       font-family: $rubrik-font;
     }
     p {
-      color: $text-secondry-color;
+      color: $text-secondary-color;
       font-family: $body-font;
     }
     .btn {
@@ -103,7 +105,7 @@ body {
 
     .child {
       margin: 10px;
-      width: calc(50% - 10px);
+      width: calc(50% - 40px);
     }
   }
   .container-1 {
@@ -115,29 +117,68 @@ body {
     .child-1 {
       width: calc(50% - 10px);
       align-items: center;
+      position: relative;
+       h2 {
+            position: absolute;
+            top: -30px;
+            
+
+        
+        }
+        p{
+            position: absolute;
+        }
+        .btn {
+            position: absolute;
+            right: 10px;
+        }
     }
   }
 }
 @include desktop {
+    .rubrik{
+        h2{
+            font-size: 50px;
+        }
+    }
   .container {
     flex-direction: row;
     flex-wrap: nowrap;
     .child {
       width: calc(33.33% - 10px);
+      height: calc(20% - 10px);
     }
 
-    .container-1 {
-      flex-direction: column;
+    
+  }
+  .container-1 {
+      flex-direction: row;
 
       align-items: center;
       padding: 20px;
+      height: 80px;
 
       .child-1 {
         width: calc(50% - 10px);
         align-items: center;
+        display: flex;
+        position: relative;
+        
+        h2 {
+            position: absolute;
+            top: -60px
+
+        
+        }
+        p{
+            position: absolute;
+        }
+        .btn {
+            position: absolute;
+            right: 10px;
+        }
       }
     }
-  }
   .rubrik {
     text-align: left;
   }
