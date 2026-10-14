@@ -12,37 +12,46 @@ body {
             color: $links-color;
         }
 }
-h1 {
+h1, h2 {
     font-family: $rubrik-font;
     color: $text-primary-color;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;    
+    margin-block: 0;
 }
 
 .contact-info {
+    margin-top: 10px;    
     
-    address {
-        line-height: 1.8;        
+    &__address {
+        line-height: 1.8;
+        margin-bottom: 10px;            
     }
     
-    &__map {
-        width: 350px;
-        height: 300px;
-        padding: 20px 0;
-    }
+    &__opening {
+        margin-top: 10px;
+        border-top: solid 1px $border-p-color; 
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        line-height: 1.8;
 
-        &__opening {
-            border-top: solid 1px $border-p-color; 
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            line-height: 1.8;
-        }
-
-            span {
-                border-bottom: solid 1px $border-p-color; 
+        span {
+                border-bottom: solid 1px $border-p-color;                 
             }
+    }
+
+    &__map {
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 .contact-form {
-    padding: 20px;
+    margin-top: 30px;
     background-color: $box-color;
     border-radius: $border-radius-prime;
     display: flex;
@@ -70,6 +79,29 @@ h1 {
 }
 
 // Media queries mobile first
+
+@include tablet1 {
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+        "contact opening-hours"
+        "map map";   
+        
+            &__address {
+                margin-left: 10px;
+            }
+
+            &__opening-hours {
+                margin-right: 10px;
+            }
+    }
+
+      
+}
+
+
 
 // @media screen and (min-width:576px) {
 //     body {

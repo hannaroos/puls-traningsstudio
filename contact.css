@@ -51,7 +51,7 @@ header nav a {
 header .logo {
   display: flex;
 }
-header .logo h1 {
+header .logo h2 {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
   position: absolute;
@@ -103,31 +103,42 @@ body a {
   color: #FF8F5C;
 }
 
-h1 {
+h1, h2 {
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-block: 0;
 }
 
-.contact-info address {
-  line-height: 1.8;
+.contact-info {
+  margin-top: 10px;
 }
-.contact-info__map {
-  width: 350px;
-  height: 300px;
-  padding: 20px 0;
+.contact-info__address {
+  line-height: 1.8;
+  margin-bottom: 10px;
 }
 .contact-info__opening {
+  margin-top: 10px;
   border-top: solid 1px #2A2E37;
   display: grid;
   grid-template-columns: 2fr 1fr;
   line-height: 1.8;
 }
-.contact-info span {
+.contact-info__opening span {
   border-bottom: solid 1px #2A2E37;
+}
+.contact-info__map {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .contact-form {
-  padding: 20px;
+  margin-top: 30px;
   background-color: #1C1F26;
   border-radius: 8px;
   display: flex;
@@ -149,4 +160,19 @@ h1 {
   border: solid 1px #2A2E37;
   padding: 10px;
   border-radius: 8px;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: "contact opening-hours" "map map";
+  }
+  .contact-info__address {
+    margin-left: 10px;
+  }
+  .contact-info__opening-hours {
+    margin-right: 10px;
+  }
 }/*# sourceMappingURL=contact.css.map */
