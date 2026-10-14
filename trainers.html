@@ -1,95 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="trainers.css">
-    <link rel="stylesheet" href="mixins.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
-</head>
-<body>
+    <link rel="stylesheet" href="trainers.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity preview-icon">
+      <div class="logo">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity preview-icon">
             <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg> -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"/>
-            </svg>
-            <h1>PULS</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5" />
+        </svg>
+        <h1>PULS</h1>
+      </div>
+      <nav>
+        <details>
+          <summary>Meny ☰</summary>
+          <a href="#">Start</a>
+          <a href="#">Schema</a>
+          <a href="#">Medlemsskap</a>
+          <a href="#">Tränare</a>
+          <a href="#">Kontakt</a>
+        </details>
+        <div class="nav-desktop">
+            <a href="#">Start</a>
+            <a href="#">Schema</a>
+            <a href="#">Medlemsskap</a>
+            <a href="#">Tränare</a>
+            <a href="#">Kontakt</a>
         </div>
-        <nav>
-            <details>
-                <summary>Meny ☰</summary>
-                <a href="#">Start</a>
-                <a href="#">Schema</a>
-                <a href="#">Medlemsskap</a>
-                <a href="#">Tränare</a>
-                <a href="#">Kontakt</a>
-            </details>
-        </nav>
+      </nav>
     </header>
-    <div class="rubrik">
-            <h2>Våra Tränare</h2>
-            <p>Licensierade instruktörer och PT:s som hjälper dig komma igång - och hålla i.</p>
-        </div>
+    <main>
+      <div class="rubrik">
+        <h2>Våra Tränare</h2>
+        <p>
+          Licensierade instruktörer och PT:s som hjälper dig komma igång - och
+          hålla i.
+        </p>
+      </div>
 
-    <section class="container">
-        
+      <section class="container">
         <div class="child">
-            <img src="/images/trainer_1.png" alt="porträtt">
-            <h2>AMIR KADIR</h2>
-            <a href="#">PT • Styrka</a>
-            <p>Hjälper nybörjare bygga styrka med säker teknik.</p>
-            
-            <span class="keyword">Styrka bas</span>
-                
+          <img src="/images/trainer_1.png" alt="porträtt av PT" />
+          <h2>AMIR KADIR</h2>
+          <a href="#">PT • Styrka</a>
+          <p>Hjälper nybörjare bygga styrka med säker teknik.</p>
 
+          <span class="keyword">Styrka bas</span>
         </div>
         <div class="child">
-            <img src="/images/trainer_2.png" alt="porträtt">
-            <h2>JOHANNA EK</h2>
-            <a href="#">Instruktör • Kondition</a>
-            <p>Tidigare friidrottare som älskar höga pulser.</p>
-            
-            <span class="keyword">Puls HIIT</span>
-            <span class="keyword">Cykel</span>
-            
+          <img src="/images/trainer_2.png" alt="porträtt av PT" />
+          <h2>JOHANNA EK</h2>
+          <a href="#">Instruktör • Kondition</a>
+          <p>Tidigare friidrottare som älskar höga pulser.</p>
+
+          <span class="keyword">Puls HIIT</span>
+          <span class="keyword">Cykel</span>
         </div>
         <div class="child">
-            <img src="/images/trainer_3.png" alt="porträtt">
-            <h2>LINA PARK</h2>
-            <a href="#">Instruktör • Rörlighet</a>
-            <p>Fysioterapeut med fokus på rygg och leder.</p>
-            
-            <span class="keyword">Rörlighet</span>
-                
-            
+          <img src="/images/trainer_3.png" alt="porträtt av PT" />
+          <h2>LINA PARK</h2>
+          <a href="#">Instruktör • Rörlighet</a>
+          <p>Fysioterapeut med fokus på rygg och leder.</p>
+
+          <span class="keyword">Rörlighet</span>
         </div>
         <div class="child">
-            <img src="/images/trainer_4.png" alt="porträtt">
-            <h2>ERIK SUND</h2>
-            <a href="#">PT • Löpning</a>
-            <p>Coachar allt från 5 km till maraton.</p>
-            
-            <span class="keyword">Cykel</span>
-            <span class="keyword">Puls HIIT</span>
+          <img src="/images/trainer_4.png" alt="porträtt av PT" />
+          <h2>ERIK SUND</h2>
+          <a href="#">PT • Löpning</a>
+          <p>Coachar allt från 5 km till maraton.</p>
+
+          <span class="keyword">Cykel</span>
+          <span class="keyword">Puls HIIT</span>
         </div>
-    </section>
-    <section class="container-1">
+      </section>
+      <section class="container-1">
         <div class="child-1">
-            <h2>VILL DU TRÄNA MED PT?</h2>
-            <P>Första konsultationen är kostnadsfri.</P>
+          <h2>VILL DU TRÄNA MED PT?</h2>
+          <p>Första konsultationen är kostnadsfri.</p>
+        </div>
+        <div class="child-1"> 
+        
             <button class="btn">Boka konsultation</button>
         </div>
-    </section>
+      </section>
+    </main>
+    <footer class="footer">
+        <h2>Puls träningsstudio</h2>
+        <address>
+            Industrigatan 18, 123 45 Hamnstad<br>
+            <a href="tel:0107654321">010-765 43 21</a>
+         </address>
+         <!-- <div>
+            <p>Bemannat vardagar 06-21</p>
+            <p>Öppet för medlemmar 05-23</p>
+         </div> -->
 
-    
-</body>
+    </footer>
+  </body>
 </html>

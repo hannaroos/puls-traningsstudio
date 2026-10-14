@@ -8,6 +8,9 @@ header {
   border-bottom: solid 1px #2A2E37;
   height: 80px;
 }
+header .nav-desktop {
+  display: none;
+}
 header nav {
   display: flex;
 }
@@ -71,6 +74,22 @@ header nav {
   margin-top: 20px;
 }
 
+@media (min-width: 1024px) {
+  header nav details {
+    display: none;
+  }
+  header .nav-desktop {
+    display: flex;
+  }
+  header .nav-desktop a {
+    color: #F2F3F5;
+    margin-right: 20px;
+  }
+  header .nav-desktop a:hover {
+    color: #FF8F5C;
+    border-bottom: solid 1px #FF8F5C;
+  }
+}
 .footer {
   display: flex;
   flex-wrap: wrap;
