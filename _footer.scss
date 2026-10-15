@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .footer {
     display: flex;
@@ -24,4 +25,16 @@
     a {
         color: $links-color;
     }
+
+    div {
+        display: none;
+    }
+}
+
+@include tablet1 {
+    .footer {
+        div {
+            display: unset;
+        }
+    }    
 }
