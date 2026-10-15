@@ -50,19 +50,16 @@ header nav a {
 }
 header .logo {
   display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
 }
 header .logo h2 {
   color: #F2F3F5;
-  font-family: "Barlow", sans-serif;
-  position: absolute;
-  top: -5px;
-  left: 60px;
+  font-family: "Barlow Condensed", sans-serif;
 }
 header .logo svg {
   color: #FF7A3D;
-  position: absolute;
-  top: 25px;
-  width: 50px;
 }
 
 header nav {

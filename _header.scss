@@ -63,22 +63,25 @@ header {
   }
   .logo{
     display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
     
     h2{
         color: $text-primary-color;
-        font-family: $body-font;
-        position: absolute;
-        top: -5px;
-        left: 60px;
-        
+        font-family: $rubrik-font;
+
+        // position: absolute;
+        // top: -5px;
+        // left: 60px;
 
     }
     svg{
-        color:$button-color ;
-        position: absolute;
-        top: 25px;
-        
-        width: 50px;
+        color:$button-color;
+
+        // position: absolute;
+        // top: 25px;
+        // width: 50px;
     }
   }
 }
