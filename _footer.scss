@@ -38,3 +38,11 @@
         }
     }    
 }
+
+@include desktop1 {
+    .footer {
+        div {
+            display: unset;
+        }
+    }    
+}

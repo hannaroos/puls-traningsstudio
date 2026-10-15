@@ -14,9 +14,20 @@
 
     <header>
         <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"/>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5" />
             </svg>
             <h2>PULS</h2>
         </div>
@@ -27,24 +38,30 @@
                 <a href="#">Schema</a>
                 <a href="#">Medlemsskap</a>
                 <a href="#">Tränare</a>
-                <a href="#">Kontakt</a>
+                <a href="#">Kontakt</a>                
             </details>
+            <div class="nav-desktop">
+                <a href="#">Start</a>
+                <a href="#">Schema</a>
+                <a href="#">Medlemsskap</a>
+                <a href="#">Tränare</a>
+                <a href="#">Kontakt</a>
+            </div>
         </nav>
-
     </header>
 
     <main>
-        <section class="contact-info">
-            <div class="contact-info__address" style="grid-area: contact">
-                <h1>Kontakt</h1>
-                    <address>
-                        Industrigatan 18<br>
-                        123 45 Hamnstad<br>                
-                        <a href="tel:0107654321">010-765 43 21</a><br>
-                        <a href="mailto:hej@pulsstudio.se">hej@pulsstudio.se</a>
-                    </address>
+        <section class="contact-info" style="grid-area: contact-info">
+            <h1 style="grid-area: contact">Kontakt</h1>
+            <div class="contact-info__address" style="grid-area: address">
+                <address>
+                    Industrigatan 18<br>
+                    123 45 Hamnstad<br>                
+                    <a href="tel:0107654321">010-765 43 21</a><br>
+                    <a href="mailto:hej@pulsstudio.se">hej@pulsstudio.se</a>
+                </address>
             </div>
-            <div style="grid-area: opening-hours">
+            <div class="contact-info__opening-hours" style="grid-area: opening-hours">
                 <h2>Bemannade tider</h2>
                     <div class="contact-info__opening">
                         <span>Måndag-fredag</span>
@@ -59,9 +76,8 @@
 
         </section>
 
-        <section class="contact-form">
+        <section class="contact-form" style="grid-area: contact-form">
             <h2>Skriv till oss</h2>
-
             <form class="contact-form__form">
                 <fieldset>
                     <legend>Vad gäller det?</legend>

@@ -23,3 +23,12 @@
         @content;
     }
 }
+
+// mixin för gemensam knapp
+
+@mixin btn {    
+      background-color: $button-color;
+      border-radius: $border-radius-prime;
+      padding: 10px 20px;
+      border: none;
+}
