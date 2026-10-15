@@ -15,8 +15,6 @@
 <body>
     <header>
         <div class="logo">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity preview-icon">
-            <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg> -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"/>
@@ -24,13 +22,21 @@
             <p>PULS</p>
         </div>
         <nav>
-            <ul>
-                <li><a href="">Start</a></li>
-                <li><a href="">Schema</a></li>
-                <li><a href="membership.html">Medlemskap</a></li>
-                <li><a href="">Tränare</a></li>
-                <li><a href="">Kontakt</a></li>    
-            </ul>
+            <details>
+                <summary>Meny ☰</summary>
+                <a href="#">Start</a>
+                <a href="#">Schema</a>
+                <a href="#">Medlemsskap</a>
+                <a href="#">Tränare</a>
+                <a href="#">Kontakt</a>
+            </details>
+            <div class="nav-desktop">
+                <a href="#">Start</a>
+                <a href="#">Schema</a>
+                <a href="membership.html" aria-current="page">Medlemsskap</a>
+                <a href="trainers.html">Tränare</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
         </nav>
     </header>
     <main>
@@ -114,18 +120,29 @@
         </article>
 
     </main>
-    <footer>
-        <div>
-            <p>PULSTRÄNING</p>
-        </div>
-        <div>
-            <p>Industigatan</p>
-            <a ref="telefonnummer">010-7654321</a>
-        </div>
-        <div>
-            <p>Bemannat vardager 6-12</p><br>
+    <footer class="footer">
+        <h2>Puls träningsstudio</h2>
+        <address>
+            Industrigatan 18, 123 45 Hamnstad<br>
+            <a href="tel:0107654321">010-765 43 21</a>
+         </address>
+         <!-- <div>
+            <p>Bemannat vardagar 06-21</p>
             <p>Öppet för medlemmar 05-23</p>
+         </div> -->
+    <!-- <footer> -->
+        <!-- <div class="container5">
+            <h3>PULS TRÄNINGSTUDIO</h3>
+            <div class="info">
+                <p>Industigatan 18, 12345 Hamnstad</p>
+                <a ref="telefonnummer">010-7654321</a>
+            </div>
         </div>
+        <div class="desktop">
+            <p>Bemannat vardager 6-12</p>
+            <p>Öppet för medlemmar 05-23</p>
+        </div> -->
     </footer>
 </body>
 </html>
+       

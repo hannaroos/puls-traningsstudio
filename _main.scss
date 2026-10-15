@@ -1,4 +1,5 @@
 @use "variables.scss" as *;
+@use "mixins.scss" as *;
 
 
 .container1 {
@@ -10,55 +11,53 @@
     
 
     h1 {
-        font-family: $rubrik-font;
+        @include title;
         font-weight: 700;
         font-size: 4rem;
-        text-transform: uppercase;
-        color: $text-primary-color;
         line-height: 1.3;
     }
 
     p {
         font-family: $body-font;
-        color: $text-secondry-color;
+        color: $text-secondary-color;
         font-size: 1rem; 
     }
 }
 
 .container2 {
-    display: flex;
-    flex-direction: column;
+    @include flex;
     gap: 1rem;
-    @media (min-width: $desktop) {
+    padding: 0rem 2rem;
+    
+    @media (min-width:$tablet) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        
     }
     
+    
     .medlemskap {
-        display: flex;
-        flex-direction: column;
+        @include flex;
         justify-content: flex-start;
         height: auto;
+        min-width: 0;
         background-color: $box-color;
-        margin: 0rem 2rem;
+        // margin: 0rem 2rem;
         padding: 1rem;
         border: 2px solid $border-p-color;
         border-radius: 0.5rem;
         gap: 1.5rem;
+
         
 
         h2 {
-            font-family: $rubrik-font;
-            font-weight: 700;
+            @include title;
+            
             font-size: 2rem;
-            text-transform: uppercase;
-            color: $text-primary-color;
         }
 
         p {
             font-family: $body-font;
-            color: $text-secondry-color;
+            color: $text-secondary-color;
             font-size: 1.4rem;
         }
 
@@ -82,7 +81,7 @@
 
         .info {
             width: fit-content;
-            background-color: $knapp-color;
+            background-color: $button-color;
             color:$box-color;
             border-radius: 4px;
             font-size: 1rem;
@@ -91,48 +90,48 @@
         }
 
         &:hover {
-            border-color: $knapp-color;
+            border-color: $button-color;
             .btn {
-               background-color: $knapp-color;
+               background-color: $button-color;
                color: $box-color; 
-               border-color: $knapp-color;
+               border-color: $button-color;
                font-weight: 600;
             }
         }    
     }
+    
 }
 
 .container3 {
-    margin: 1.9rem;
+    margin-top: 1rem;
+    padding: 0rem 2rem;
 
     h2 {
+        @include title;
         margin-bottom: 1rem;
-        font-family: $rubrik-font;
-        font-weight: 700;
         font-size: 2rem;
-        text-transform: uppercase;
-        color: $text-primary-color;
     }
 
     .table {
         border: 2px solid $border-p-color;
         border-radius: 0.5rem;
         border-spacing: 0;
-        max-width: 100%;
+        width: 100%;
         height: fit-content;
         font-size: 1.3rem;
         font-family: $body-font;
         text-align: left;
         
+        
 
         th {
             background-color:  $box-color;
-            color: $text-secondry-color;
+            color: $text-secondary-color;
             padding: 1rem;
         }
 
         td {
-            color: $text-secondry-color;
+            color: $text-secondary-color;
             padding: 1rem;
             border-top: 2px solid $border-p-color;
         }
@@ -140,18 +139,15 @@
 }        
 
 .container4 {
-    display: flex;
-    flex-direction: column;
+    @include flex;
     margin: 1.9rem;
+    // padding: 0rem 2rem;
     gap: 1rem;
 
     h2 {
+        @include title;
         margin-bottom: 1rem;
-        font-family: $rubrik-font;
-        font-weight: 700;
         font-size: 2rem;
-        text-transform: uppercase;
-        color: $text-primary-color;
     }
 
     .faq {
@@ -173,7 +169,7 @@
             
         p {
             font-family: $body-font;
-            color: $text-secondry-color;
+            color: $text-secondary-color;
             font-size: 1.4rem; 
             padding:0.5rem; 
         }
