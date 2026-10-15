@@ -20,7 +20,7 @@
 
     p {
         font-family: $body-font;
-        color: $text-secondry-color;
+        color: $text-secondary-color;
         font-size: 1rem; 
     }
 }
@@ -58,7 +58,7 @@
 
         p {
             font-family: $body-font;
-            color: $text-secondry-color;
+            color: $text-secondary-color;
             font-size: 1.4rem;
         }
 
@@ -82,7 +82,7 @@
 
         .info {
             width: fit-content;
-            background-color: $knapp-color;
+            background-color: $button-color;
             color:$box-color;
             border-radius: 4px;
             font-size: 1rem;
@@ -91,11 +91,11 @@
         }
 
         &:hover {
-            border-color: $knapp-color;
+            border-color: $button-color;
             .btn {
-               background-color: $knapp-color;
+               background-color: $button-color;
                color: $box-color; 
-               border-color: $knapp-color;
+               border-color: $button-color;
                font-weight: 600;
             }
         }    
@@ -127,12 +127,12 @@
 
         th {
             background-color:  $box-color;
-            color: $text-secondry-color;
+            color: $text-secondary-color;
             padding: 1rem;
         }
 
         td {
-            color: $text-secondry-color;
+            color: $text-secondary-color;
             padding: 1rem;
             border-top: 2px solid $border-p-color;
         }
@@ -173,7 +173,7 @@
             
         p {
             font-family: $body-font;
-            color: $text-secondry-color;
+            color: $text-secondary-color;
             font-size: 1.4rem; 
             padding:0.5rem; 
         }
