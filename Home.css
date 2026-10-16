@@ -53,20 +53,16 @@ header nav a {
 }
 header .logo {
   display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
 }
-header .logo p {
+header .logo h2 {
   color: #F2F3F5;
-  font-family: "Barlow", sans-serif;
-  position: absolute;
-  top: -10px;
-  left: 60px;
-  font-size: 30px;
+  font-family: "Barlow Condensed", sans-serif;
 }
 header .logo svg {
   color: #FF7A3D;
-  position: absolute;
-  top: 25px;
-  width: 50px;
 }
 
 header nav {
@@ -113,7 +109,20 @@ header nav {
 .footer a {
   color: #FF8F5C;
 }
+.footer div {
+  display: none;
+}
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .footer div {
+    display: unset;
+  }
+}
+@media (min-width: 992px) {
+  .footer div {
+    display: unset;
+  }
+}
 body {
   background: #14161B;
 }
