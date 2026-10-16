@@ -1,0 +1,134 @@
+@use "variables.scss" as *;
+@use "mixins.scss" as *;
+
+
+header {
+    display: flex;
+    background-color: $bg-color;
+    position: sticky;
+    top:0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px $border-p-color;
+    height: 80px;
+
+    
+    nav {
+        display: flex;
+        align-items:center;
+        margin-top: 4px;   /*changed from 20px to 4px*/
+        padding: 20px;  /*added*/
+
+        .nav-desktop{
+            display: none;
+        
+        }
+
+    
+        summary {
+            color: black;
+            background: $button-color;
+            border-radius: $border-radius-prime;
+            list-style: none;
+            font-size: 25px;
+            font-family: $rubrik-font; 
+            height: 40px;
+            width: 90px;
+            padding-top: 0px;
+            padding-left: 10px;
+            
+            
+            
+            &::-webkit-details-marker {
+                display: none;
+            }
+        }
+    
+        details[open] > summary {
+            font-size: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            width: 20px;
+            padding: 0;
+            justify-self: end;
+            
+            &::after {
+                content: "x";
+                font-size: 20px;
+                line-height: 5;
+            }
+        }
+
+        a {
+            color: $links-color;
+            text-decoration: none;
+            margin: 5px;
+            justify-self: auto;
+            font-family: $rubrik-font;    /*add font-family*/
+            
+        }   
+    }
+      
+
+
+    .logo{
+        display: flex;
+    
+        h1 {
+            color: $text-primary-color;
+            font-family: $body-font;
+            position: absolute;
+            top: 16px;  /*changed from -5 to 15 */  
+            left: 60px;
+
+        }
+
+        svg{
+            color:$button-color ;
+            position: absolute;
+            top: 25px;
+            width: 80px;     /*changed from 60 to 80*/
+            
+        }
+    }
+}
+
+    
+
+@include desktop {
+    header {
+        nav {
+            details{
+                display: none;
+            }
+       
+            .nav-desktop{
+                display: flex;
+                
+                a {
+                    color: $text-primary-color;
+                    margin-right: 20px;
+                    padding: 10px;  /*added*/
+                    font-weight: 500;  /*added*/
+
+                    &:hover{
+                        color: $links-color;
+                        text-decoration: underline;    /*changed*/
+                        // border-bottom: solid 1px $links-color;
+                    }
+
+                    /*added*/
+                    &[aria-current="page"] {
+                        color: $links-color;
+                        border-bottom: 2px solid $links-color;
+                        padding-bottom: 10px;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,5 @@
 @use "variables.scss" as *;
 
-@mixin btn {
-
-}
 
 @mixin flex {
     display: flex;
@@ -23,6 +20,11 @@
     color: $text-secondary-color;
 }
 
+@mixin table {
+    color: $text-secondary-color;
+    padding: $padding;
+}
+
 @mixin btn {
     color: $text-primary-color;
     background-color: $box-color;
@@ -30,8 +32,13 @@
 
 
 
-// @mixin desktop {
-//     @media (min-width:$tablet) {
-//         @content;
-//     }    
-// } 
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
