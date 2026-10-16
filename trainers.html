@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Våra tränare i Puls</title>
     <link rel="stylesheet" href="trainers.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,93 +38,91 @@
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5" />
         </svg>
-        <h1>PULS</h1>
+        <p>PULS</p>
       </div>
       <nav>
         <details>
           <summary>Meny ☰</summary>
-          <a href="#">Start</a>
+          <a href="index.html">Start</a>
           <a href="#">Schema</a>
-          <a href="#">Medlemsskap</a>
-          <a href="#">Tränare</a>
-          <a href="#">Kontakt</a>
+          <a href="membership.html">Medlemsskap</a>
+          <a href="trainers.html">Tränare</a>
+          <a href="contact.html">Kontakt</a>
         </details>
         <div class="nav-desktop">
-            <a href="#">Start</a>
-            <a href="#">Schema</a>
-            <a href="#">Medlemsskap</a>
-            <a href="#">Tränare</a>
-            <a href="#">Kontakt</a>
+          <a href="index.html">Start</a>
+          <a href="#">Schema</a>
+          <a href="membership.html">Medlemsskap</a>
+          <a href="trainers.html">Tränare</a>
+          <a href="contact.html">Kontakt</a>
         </div>
       </nav>
     </header>
     <main>
       <div class="rubrik">
-        <h2>Våra Tränare</h2>
+        <h1 id="trainers-title">Våra Tränare</h1>
         <p>
           Licensierade instruktörer och PT:s som hjälper dig komma igång - och
           hålla i.
         </p>
       </div>
 
-      <section class="container">
-        <div class="child">
-          <img src="/images/trainer_1.png" alt="porträtt av PT" />
+      <section  class="container" aria-labelledby="trainers-title">
+        <article class="child">
+          <img src="/images/trainer_1.jpg" alt="Amir Kadir, personlig tränare" decoding="async" />
           <h2>AMIR KADIR</h2>
           <a href="#">PT • Styrka</a>
           <p>Hjälper nybörjare bygga styrka med säker teknik.</p>
 
           <span class="keyword">Styrka bas</span>
-        </div>
-        <div class="child">
-          <img src="/images/trainer_2.png" alt="porträtt av PT" />
+        </article>
+        <article class="child">
+          <img src="/images/trainer_2.jpg" alt="Johanna Ek, instruktör i kondition" loading="lazy" decoding="async" />
           <h2>JOHANNA EK</h2>
           <a href="#">Instruktör • Kondition</a>
           <p>Tidigare friidrottare som älskar höga pulser.</p>
 
           <span class="keyword">Puls HIIT</span>
           <span class="keyword">Cykel</span>
-        </div>
-        <div class="child">
-          <img src="/images/trainer_3.png" alt="porträtt av PT" />
+        </article>
+        <article class="child">
+          <img src="/images/trainer_3.jpg" alt="Lina Park, instruktör i rörlighet" loading="lazy" decoding="async" />
           <h2>LINA PARK</h2>
           <a href="#">Instruktör • Rörlighet</a>
           <p>Fysioterapeut med fokus på rygg och leder.</p>
 
           <span class="keyword">Rörlighet</span>
-        </div>
-        <div class="child">
-          <img src="/images/trainer_4.png" alt="porträtt av PT" />
+        </article>
+        <article class="child">
+          <img src="/images/trainer_4.jpg" alt="Erik Sund, personlig tränare i löpning" loading="lazy" decoding="async" />
           <h2>ERIK SUND</h2>
           <a href="#">PT • Löpning</a>
           <p>Coachar allt från 5 km till maraton.</p>
 
           <span class="keyword">Cykel</span>
           <span class="keyword">Puls HIIT</span>
-        </div>
+        </article>
       </section>
       <section class="container-1">
         <div class="child-1">
           <h2>VILL DU TRÄNA MED PT?</h2>
           <p>Första konsultationen är kostnadsfri.</p>
         </div>
-        <div class="child-1"> 
-        
-            <button class="btn">Boka konsultation</button>
+        <div class="child-1">
+          <button class="btn">Boka konsultation</button>
         </div>
       </section>
     </main>
     <footer class="footer">
-        <h2>Puls träningsstudio</h2>
-        <address>
-            Industrigatan 18, 123 45 Hamnstad<br>
-            <a href="tel:0107654321">010-765 43 21</a>
-         </address>
-         <!-- <div>
+      <h2>Puls träningsstudio</h2>
+      <address>
+        Industrigatan 18, 123 45 Hamnstad<br />
+        <a href="tel:0107654321">010-765 43 21</a>
+      </address>
+      <!-- <div>
             <p>Bemannat vardagar 06-21</p>
             <p>Öppet för medlemmar 05-23</p>
          </div> -->
-
     </footer>
   </body>
 </html>

@@ -131,7 +131,7 @@ body {
   margin-bottom: 20px;
   text-align: center;
 }
-.rubrik h2 {
+.rubrik h1 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
 }
@@ -171,7 +171,7 @@ body {
 .container .child + .child {
   margin-top: 20px;
 }
-.container h1 {
+.container h2 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
 }
@@ -211,7 +211,7 @@ body {
 }
 .container-1 .child-1 .btn {
   background-color: #FF7A3D;
-  color: #F2F3F5;
+  color: black;
   border-radius: 8px;
   padding: 10px 20px;
   border: none;
@@ -252,7 +252,7 @@ body {
   }
 }
 @media (min-width: 1024px) {
-  .rubrik h2 {
+  .rubrik h1 {
     font-size: 50px;
   }
   .container {
