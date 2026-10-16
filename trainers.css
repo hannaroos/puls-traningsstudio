@@ -118,7 +118,7 @@ header nav {
     display: unset;
   }
 }
-@media (min-width: 992px) and (max-width: 1400px) {
+@media (min-width: 992px) {
   .footer div {
     display: unset;
   }

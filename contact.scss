@@ -38,7 +38,7 @@ h1, h2 {
         line-height: 1.8;
 
         span {
-                border-bottom: solid 1px $border-p-color;                 
+            border-bottom: solid 1px $border-p-color;                                
             }
     }
 
@@ -47,7 +47,7 @@ h1, h2 {
         height: 300px;
         margin-top: 20px;
         border-radius: $border-radius-prime;
-        display: grid;
+        display: grid;        
         grid-template-columns: 1fr;
     }
 }
@@ -104,13 +104,21 @@ h1, h2 {
 }
 
 @include desktop1 {
+    .container {
+        @include container
+    }
+
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
         "contact-info contact-form"
         "contact-info contact-form"
-        "contact-info contact-form"; 
+        "contact-info contact-form";
+        
+        h1{
+            font-size: 3rem;
+        }
 
         .contact-info {
             display: grid;
@@ -120,6 +128,20 @@ h1, h2 {
             "map"
             "address"
             "opening-hours";
+
+                &__map {
+                    width: 90%;
+                    height: 350px;
+                }
+
+                &__address {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                span {
+                    padding: 5px 0;
+                }
         }
 
         .contact-form {
@@ -156,28 +178,3 @@ h1, h2 {
         }
     }
 }
-
-
-// @media screen and (min-width:576px) {
-//     body {
-//         max-width: 576px;
-//     }
-// }
-
-// @media screen and (min-width:992px) {
-//     body {
-//         max-width: 992px;
-//     }
-// }
-
-// @media screen and (min-width:1200px) {
-//     body {
-//         max-width: 1200px;
-//     }
-// }
-
-// @media screen and (min-width:1536px) {
-//     body {
-//         max-width: 1536px;
-//     }
-// }

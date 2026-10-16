@@ -118,7 +118,7 @@ header nav {
     display: unset;
   }
 }
-@media (min-width: 992px) and (max-width: 1400px) {
+@media (min-width: 992px) {
   .footer div {
     display: unset;
   }
@@ -207,16 +207,34 @@ h1, h2 {
     margin-right: 10px;
   }
 }
-@media (min-width: 992px) and (max-width: 1400px) {
+@media (min-width: 992px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "contact-info contact-form" "contact-info contact-form" "contact-info contact-form";
   }
+  main h1 {
+    font-size: 3rem;
+  }
   main .contact-info {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "contact" "map" "address" "opening-hours";
+  }
+  main .contact-info__map {
+    width: 90%;
+    height: 350px;
+  }
+  main .contact-info__address {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  main .contact-info span {
+    padding: 5px 0;
   }
   main .contact-form legend {
     margin: 10px 10px;

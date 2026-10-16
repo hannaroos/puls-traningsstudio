@@ -19,9 +19,15 @@
 }
 
 @mixin desktop1 {
-    @media (min-width: $lg) and (max-width: $xxl) {
+    @media (min-width: $lg) {
         @content;
     }
+}
+
+//mixin för container för dekstop
+@mixin container {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 // mixin för gemensam knapp
