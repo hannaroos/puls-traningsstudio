@@ -68,12 +68,13 @@ header {
   .logo{
     display: flex;
     
-    h1{
+    p{
         color: $text-primary-color;
         font-family: $body-font;
         position: absolute;
-        top: -5px;
+        top: -10px;
         left: 60px;
+        font-size: 30px;
         
 
     }

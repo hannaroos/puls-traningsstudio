@@ -9,7 +9,7 @@ body {
 .rubrik {
   margin-bottom: 20px;
   text-align: center;
-  h2 {
+  h1 {
     color: $text-primary-color;
     font-family: $rubrik-font;
   }
@@ -50,7 +50,7 @@ body {
   .child + .child {
     margin-top: 20px;
   }
-  h1 {
+  h2 {
     color: $text-primary-color;
     font-family: $rubrik-font;
   }
@@ -89,7 +89,7 @@ body {
     }
     .btn {
       background-color: $button-color;
-      color: $text-primary-color;
+      color: black;
       border-radius: $border-radius-prime;
       padding: 10px 20px;
       border: none;
@@ -137,7 +137,7 @@ body {
 }
 @include desktop {
     .rubrik{
-        h2{
+        h1{
             font-size: 50px;
         }
     }

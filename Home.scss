@@ -1,0 +1,61 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "header" as *;
+@use "footer" as *;
+
+
+body {
+  background: $bg-color;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        color: $text-primary-color;
+        font-family: $rubrik-font;
+        font-size: 80px;
+        align-self: flex-start;
+        span{
+            color: $button-color;
+        }
+    }
+    
+    p{
+       color: $text-secondary-color;
+       align-self: flex-start;
+       transform: translateY(-50px);
+       font-size: 20px;
+       
+       
+    }
+    .child-btn{
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-50px);
+        
+        button{
+            background: $button-color;
+            width: 400px;
+            height: 60px;
+            border-radius: $border-radius-prime;
+            margin-top: 20px;
+            color: $bg-color;
+            font-family: $body-font;
+            font-size: 20px;
+        }
+        .btn-1{
+            background: $bg-color;
+            width: 400px;
+            height: 60px;
+            border-radius: $border-radius-prime;
+            margin-top: 20px;
+            color: $text-primary-color;
+            font-family: $body-font;
+            font-size: 20px;
+            border: solid 1px $text-primary-color;
+        }
+
+    }
+}
