@@ -150,7 +150,7 @@
         border: $border;
         border-radius: $border-radius;
         background-color:  $box-color;
-        padding: 1rem;
+        padding: $padding;
 
         summary {
             @include text;
@@ -183,4 +183,3 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }   
-

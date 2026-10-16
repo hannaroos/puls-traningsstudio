@@ -42,3 +42,15 @@
         @content;
     }
 }
+
+@mixin tablet1 {
+    @media (min-width: $sm) and (max-width: $lg) {
+        @content;
+    }
+}
+
+@mixin desktop1 {
+    @media (min-width: $lg) {
+        @content;
+    }
+}

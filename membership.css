@@ -1,4 +1,14 @@
 /* // base.scss */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #14161B;
+}
+
 .container1 {
   display: flex;
   flex-direction: column;
@@ -239,17 +249,19 @@ header nav a {
 header .logo {
   display: flex;
 }
-header .logo h1 {
+header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
   position: absolute;
-  top: 16px; /*changed from -5 to 15 */
+  top: 25px; /*changed from -10 to 25 */
   left: 60px;
+  font-size: 25px; /*changed*/
+  font-weight: 600; /*added*/
 }
 header .logo svg {
   color: #FF7A3D;
   position: absolute;
-  top: 25px;
+  top: 28px; /*changed*/
   width: 80px; /*changed from 60 to 80*/
 }
 
@@ -268,7 +280,6 @@ header .logo svg {
   }
   header nav .nav-desktop a:hover {
     color: #FF8F5C;
-    text-decoration: underline; /*changed*/
   }
   header nav .nav-desktop a {
     /*added*/
@@ -286,32 +297,32 @@ header .logo svg {
   color: #C9CCD3;
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
-  padding: 10px 0px;
+  padding: 25px; /* 10px 0px;*/
   margin-top: 50px;
+}
+.footer address {
+  align-self: center;
+  line-height: 1.8;
 }
 .footer h2 {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   color: #F2F3F5;
 }
-.footer address {
-  align-self: center;
-  line-height: 1.8;
-}
-.footer address a {
+.footer a {
   color: #FF8F5C;
 }
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.footer div {
+  display: none;
 }
 
-:focus-visible {
-  outline: 2px solid #FF8F5C;
+@media (min-width: 576px) and (max-width: 992px) {
+  .footer div {
+    display: unset;
+  }
 }
-
-body {
-  background-color: #14161B;
+@media (min-width: 992px) {
+  .footer div {
+    display: unset;
+  }
 }/*# sourceMappingURL=membership.css.map */

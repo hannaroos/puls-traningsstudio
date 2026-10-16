@@ -77,19 +77,20 @@ header {
     .logo{
         display: flex;
     
-        h1 {
+        p {
             color: $text-primary-color;
             font-family: $body-font;
             position: absolute;
-            top: 16px;  /*changed from -5 to 15 */  
-            left: 60px;
-
+            top: 25px;  /*changed from -10 to 25 */  
+            left: 60px;  
+            font-size: 25px;   /*changed*/
+            font-weight: 600;  /*added*/
         }
 
         svg{
             color:$button-color ;
             position: absolute;
-            top: 25px;
+            top: 28px;       /*changed*/
             width: 80px;     /*changed from 60 to 80*/
             
         }
@@ -116,7 +117,6 @@ header {
 
                     &:hover{
                         color: $links-color;
-                        text-decoration: underline;    /*changed*/
                         // border-bottom: solid 1px $links-color;
                     }
 
