@@ -98,7 +98,7 @@ header nav {
   color: #C9CCD3;
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
-  padding: 10px 0px;
+  padding: 25px; /* 10px 0px;*/
   margin-top: 50px;
 }
 .footer address {
@@ -113,7 +113,20 @@ header nav {
 .footer a {
   color: #FF8F5C;
 }
+.footer div {
+  display: none;
+}
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .footer div {
+    display: unset;
+  }
+}
+@media (min-width: 992px) {
+  .footer div {
+    display: unset;
+  }
+}
 body {
   background: #14161B;
 }
