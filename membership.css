@@ -17,7 +17,7 @@ body {
   margin: 2rem;
 }
 .container1 h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
@@ -51,12 +51,11 @@ body {
   gap: 1.5rem;
 }
 .container2 .medlemskap h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
   text-transform: uppercase;
-  font-size: 1.6rem;
 }
 .container2 .medlemskap p {
   font-size: 1rem;
@@ -64,9 +63,10 @@ body {
   color: #C9CCD3;
   font-size: 1.4rem;
 }
-.container2 .medlemskap strong {
+.container2 .medlemskap .price {
   color: #F2F3F5;
   font-size: 2.5rem;
+  font-weight: bold;
 }
 .container2 .medlemskap .btn {
   border: 3px solid #F2F3F5;
@@ -80,6 +80,11 @@ body {
   text-align: center;
   align-self: center;
 }
+.container2 .medlemskap .btn:focus-visible {
+  outline: 2px solid #FF8F5C;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
 .container2 .medlemskap .info {
   width: -moz-fit-content;
   width: fit-content;
@@ -90,10 +95,10 @@ body {
   font-weight: 600;
   padding: 5px;
 }
-.container2 .medlemskap:hover {
+.container2 .medlemskap:hover, .container2 .medlemskap:focus-within {
   border-color: #FF7A3D;
 }
-.container2 .medlemskap:hover .btn {
+.container2 .medlemskap:hover .btn, .container2 .medlemskap:focus-within .btn {
   background-color: #FF7A3D;
   color: #1C1F26;
   border-color: #FF7A3D;
@@ -101,16 +106,16 @@ body {
 }
 
 .container3 {
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 0rem 2rem;
 }
 .container3 h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .container3 .table-wrapper {
   overflow-x: auto;
@@ -144,7 +149,7 @@ body {
   gap: 1rem;
 }
 .container4 h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
@@ -152,7 +157,7 @@ body {
   margin-bottom: 1rem;
   font-size: 1.6rem;
 }
-.container4 .faq {
+.container4 details {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
@@ -161,23 +166,33 @@ body {
   background-color: #1C1F26;
   padding: 1rem;
 }
-.container4 .faq summary {
+.container4 details summary {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   color: #C9CCD3;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   cursor: pointer;
 }
-.container4 .faq p {
+.container4 details summary:focus-visible {
+  outline: 2px solid #FF8F5C;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+.container4 details p {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   color: #C9CCD3;
-  font-size: 1.4rem;
   padding: 0.5rem;
 }
+.container4 details[open] {
+  border-color: #FF7A3D;
+}
+.container4 details[open] summary::marker {
+  color: #FF7A3D;
+}
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .container1 h1 {
     font-size: 3rem;
   }
@@ -199,14 +214,11 @@ header {
   border-bottom: solid 1px #2A2E37;
   height: 80px;
 }
+header .nav-desktop {
+  display: none;
+}
 header nav {
   display: flex;
-  align-items: center;
-  margin-top: 4px; /*changed from 20px to 4px*/
-  padding: 20px; /*added*/
-}
-header nav .nav-desktop {
-  display: none;
 }
 header nav summary {
   color: black;
@@ -263,6 +275,12 @@ header .logo svg {
   position: absolute;
   top: 28px; /*changed*/
   width: 80px; /*changed from 60 to 80*/
+}
+
+header nav {
+  align-items: center;
+  margin-top: 4px; /*changed from 20px to 4px*/
+  padding: 20px; /*added*/
 }
 
 @media (min-width: 1024px) {

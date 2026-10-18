@@ -11,20 +11,15 @@ header {
     align-items: center;
     border-bottom: solid 1px $border-p-color;
     height: 80px;
-
+    .nav-desktop{
+        display: none;
+        
+    }
     
     nav {
         display: flex;
-        align-items:center;
-        margin-top: 4px;   /*changed from 20px to 4px*/
-        padding: 20px;  /*added*/
-
-        .nav-desktop{
-            display: none;
-        
-        }
-
     
+        
         summary {
             color: black;
             background: $button-color;
@@ -95,6 +90,11 @@ header {
             
         }
     }
+}
+header nav{ 
+    align-items:center;
+    margin-top: 4px;   /*changed from 20px to 4px*/
+    padding: 20px;  /*added*/
 }
 
     
