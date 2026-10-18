@@ -132,6 +132,21 @@ body {
   background: #14161B;
 }
 
+p {
+  color: #C9CCD3;
+  font-family: "Barlow", sans-serif;
+}
+
+h2 {
+  color: #F2F3F5;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+h3 {
+  color: #F2F3F5;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -178,4 +193,74 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 20px;
   border: solid 1px #F2F3F5;
+}
+.container .child {
+  width: 400px;
+  height: 300px;
+  background: #2A2E37;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+.container .child p {
+  transform: translateY(100px);
+}
+
+.pop-pass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pop-pass a {
+  align-self: start;
+  color: #FF8F5C;
+  margin: 20px;
+}
+.pop-pass h2 {
+  align-self: start;
+  font-size: 30px;
+}
+.pop-pass .child-1 {
+  height: 100px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #1C1F26;
+  margin: 15px;
+}
+.pop-pass .child-1 p {
+  color: #FF8F5C;
+}
+.pop-pass .child-2 {
+  background: #FF7A3D;
+  width: 400px;
+  height: 180px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+.pop-pass .child-2 .sec-btn {
+  background: #14161B;
+  color: #F2F3F5;
+  justify-self: center;
+  align-self: center;
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+}
+.pop-pass .child-2 h3 {
+  font-size: 40px;
+  margin: 15px;
+  color: #14161B;
+}
+.pop-pass .child-2 p {
+  align-self: flex-start;
+  color: #14161B;
+  transform: translateX(50px);
+  margin: 5px;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=Home.css.map */
