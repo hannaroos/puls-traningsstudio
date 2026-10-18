@@ -58,8 +58,9 @@ header .logo p {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
   position: absolute;
-  top: -5px;
+  top: -10px;
   left: 60px;
+  font-size: 30px;
 }
 header .logo svg {
   color: #FF7A3D;
