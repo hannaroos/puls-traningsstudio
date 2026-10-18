@@ -56,7 +56,7 @@ header .logo {
 }
 header .logo p {
   color: #F2F3F5;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   position: absolute;
   top: -10px;
   left: 60px;
@@ -99,7 +99,7 @@ header nav {
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
   padding: 10px 0px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .footer address {
   align-self: center;
@@ -109,11 +109,26 @@ header nav {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   color: #F2F3F5;
+  margin-left: 10px;
 }
 .footer a {
   color: #FF8F5C;
 }
+.footer div {
+  display: none;
+}
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .footer div {
+    display: unset;
+  }
+}
+@media (min-width: 992px) {
+  .footer div {
+    display: unset;
+    margin-right: 10px;
+  }
+}
 body {
   background-color: #14161B;
   color: #C9CCD3;
@@ -123,50 +138,192 @@ body a {
   color: #FF8F5C;
 }
 
-h1 {
+h1, h2 {
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-block: 0;
 }
 
-.contact-info address {
-  line-height: 1.8;
+.contact-info {
+  margin-top: 1rem;
 }
-.contact-info__map {
-  width: 350px;
-  height: 300px;
-  padding: 20px 0;
+.contact-info__address {
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 .contact-info__opening {
+  margin-top: 1rem;
   border-top: solid 1px #2A2E37;
   display: grid;
   grid-template-columns: 2fr 1fr;
   line-height: 1.8;
 }
-.contact-info span {
+.contact-info__opening span {
   border-bottom: solid 1px #2A2E37;
+}
+.contact-info__map {
+  width: 95%;
+  min-height: 300px;
+  margin-top: 2rem;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .contact-form {
-  padding: 20px;
+  margin-top: 3rem;
+  padding: 0 2rem;
   background-color: #1C1F26;
   border-radius: 8px;
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
+}
+.contact-form h2 {
+  font-size: 1.5rem;
 }
 .contact-form__form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
 }
-.contact-form input, .contact-form textarea {
+.contact-form__form fieldset {
+  padding: 0;
+  border: none;
+}
+.contact-form__form fieldset legend {
+  padding: 1rem 0;
+}
+.contact-form__form input, .contact-form__form textarea {
   background-color: #14161B;
   border: solid 1px #2A2E37;
-  accent-color: #FF7A3D;
 }
-.contact-form button {
+.contact-form__form button {
   background-color: #FF7A3D;
   align-self: flex-start;
   border: solid 1px #2A2E37;
-  padding: 10px;
+  padding: 1rem;
   border-radius: 8px;
+}
+.contact-form__option {
+  border: solid 1px #2A2E37;
+  margin-right: 0.5rem;
+  padding: 0.1rem;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas: "contact opening-hours" "address opening-hours" "map map";
+  }
+  .contact-info h1 {
+    margin-left: 1rem;
+  }
+  .contact-info__address {
+    margin-left: 1rem;
+  }
+  .contact-info__opening-hours {
+    margin-right: 1rem;
+  }
+  .contact-info__map {
+    width: 98%;
+  }
+  .contact-form__option {
+    border: solid 1px #2A2E37;
+    margin-right: 1rem;
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    grid-template-areas: "contact-info contact-form" "contact-info contact-form" "contact-info contact-form";
+  }
+  main h1 {
+    font-size: 4rem;
+  }
+  main h2 {
+    font-size: 2.5rem;
+  }
+  main .contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "contact" "map" "address" "opening-hours";
+  }
+  main .contact-info__map {
+    width: 100%;
+    min-height: 350px;
+  }
+  main .contact-info__address {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  main .contact-info span {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  main .contact-form {
+    height: 850px;
+  }
+  main .contact-form h2 {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+  main .contact-form__option {
+    margin-right: 1rem;
+    padding: 0.5rem;
+  }
+  main .contact-form__label {
+    margin: 0rem 1rem;
+  }
+  main .contact-form__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 850px;
+    flex: 1;
+  }
+  main .contact-form__form fieldset {
+    margin: 5px;
+  }
+  main .contact-form__form legend {
+    font-size: 1.2rem;
+  }
+  main .contact-form__form label {
+    font-size: 1.2rem;
+  }
+  main .contact-form__form input[type=text] {
+    height: 3rem;
+    margin: 0 1rem;
+  }
+  main .contact-form__form input[type=email] {
+    height: 3rem;
+    margin: 0 1rem;
+  }
+  main .contact-form__form textarea {
+    height: 10rem;
+    margin: 0 1rem;
+  }
+  main .contact-form__form button {
+    background-color: #FF7A3D;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    margin: 1rem 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=contact.css.map */

@@ -56,7 +56,7 @@ header .logo {
 }
 header .logo p {
   color: #F2F3F5;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   position: absolute;
   top: -10px;
   left: 60px;
@@ -99,7 +99,7 @@ header nav {
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
   padding: 10px 0px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .footer address {
   align-self: center;
@@ -109,11 +109,26 @@ header nav {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   color: #F2F3F5;
+  margin-left: 10px;
 }
 .footer a {
   color: #FF8F5C;
 }
+.footer div {
+  display: none;
+}
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .footer div {
+    display: unset;
+  }
+}
+@media (min-width: 992px) {
+  .footer div {
+    display: unset;
+    margin-right: 10px;
+  }
+}
 body {
   background: #14161B;
 }

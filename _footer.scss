@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .footer {
     display: flex;
@@ -8,7 +9,7 @@
     font-family: $body-font;
     border-top: solid 1px $border-p-color;
     padding: 10px 0px;
-    margin-top: 50px;
+    margin-top: 100px;
 
     address {
         align-self: center;
@@ -19,9 +20,31 @@
         font-family: $rubrik-font;
         text-transform: uppercase;
         color: $text-primary-color;
+        margin-left: 10px;
     }
 
     a {
         color: $links-color;
     }
+
+    div {
+        display: none;
+    }
+}
+
+@include tablet1 {
+    .footer {
+        div {
+            display: unset;            
+        }
+    }    
+}
+
+@include desktop1 {
+    .footer {
+        div {
+            display: unset;
+            margin-right: 10px;
+        }
+    }    
 }
