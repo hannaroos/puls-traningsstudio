@@ -17,3 +17,38 @@
 // body {
 //     background-color: $bg-color;
 // }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+p{
+    font-family: $body-font;
+}
+
+body {
+    background-color: $bg-color;
+}
+
+// header
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 2px solid $border-p-color;
+
+    svg {
+        color: $button-color;
+        width: 1.5rem;    
+    }
+
+    p {
+        font-size: 2rem;
+        font-family: $rubrik-font;
+        font-weight: 600;
+        color: $text-primary-color;
+    }
+}

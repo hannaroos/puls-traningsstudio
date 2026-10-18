@@ -18,6 +18,9 @@
     }
 
     p {
+        font-family: $body-font;
+        color: $text-secondary-color;
+        font-size: 1rem; 
         @include text; 
     }
 }
@@ -48,6 +51,8 @@
 
         p {
             @include text;
+            font-family: $body-font;
+            color: $text-secondary-color;
             font-size: 1.4rem;
         }
 
@@ -72,6 +77,7 @@
         .info {
             width: fit-content;
             background-color: $button-color;
+            background-color: $button-color;
             color:$box-color;
             border-radius: 4px;
             font-size: 1rem;
@@ -81,9 +87,12 @@
 
         &:hover {
             border-color: $button-color;
+            border-color: $button-color;
             .btn {
                background-color: $button-color;
+               background-color: $button-color;
                color: $box-color; 
+               border-color: $button-color;
                border-color: $button-color;
                font-weight: 600;
             }
@@ -118,6 +127,11 @@
             font-family: $body-font;
             text-align: left;
 
+        th {
+            background-color:  $box-color;
+            color: $text-secondary-color;
+            padding: 1rem;
+        }
             th {
                 @include table;
                 background-color:  $box-color;
@@ -128,6 +142,10 @@
                 @include table;
                 border-top: $border;
             }
+        td {
+            color: $text-secondary-color;
+            padding: 1rem;
+            border-top: 2px solid $border-p-color;
         }
     } 
 }       
@@ -162,6 +180,8 @@
             
         p {
             @include text;
+            font-family: $body-font;
+            color: $text-secondary-color;
             font-size: 1.4rem; 
             padding:0.5rem; 
         }
