@@ -358,10 +358,12 @@ header nav {
   align-self: center;
   line-height: 1.8;
 }
-.footer h2 {
+.footer__title {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   color: #F2F3F5;
+  font-weight: 700;
+  font-size: 30px;
 }
 .footer a {
   color: #FF8F5C;
