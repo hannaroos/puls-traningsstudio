@@ -20,6 +20,18 @@ $gap: 1rem;
 $desktop: 1024px;
 $tablet: 768px;
 
+//Variabel för h1 desktop
+$title-size-desktop: 4rem;
+
+//Variabel för h1 mobil/tablet
+$title-size: 2rem; 
+
+//Variabel för underrubriker (h2,h3) desktop
+$subheading-size-desktop: 2.5rem;
+
+//Variabel för underrubriker (h2,h3) desktop
+$subheading-size: 1.5rem;
+
 //Breakpoints
 $sm: 576px;
 $md: 768px;

@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
 }
-@mixin title ($fontWeight: 600, $fontSize: 1.5rem) {
+@mixin title ($fontWeight: 700, $fontSize: 2rem) {
     font-size: $fontSize;
     font-weight: $fontWeight;
     font-family: $rubrik-font;
