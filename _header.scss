@@ -11,6 +11,7 @@ header {
     align-items: center;
     border-bottom: solid 1px $border-p-color;
     height: 80px;
+    
     .nav-desktop{
         display: none;
         
@@ -69,6 +70,7 @@ header {
             font-family: $body-font; 
             font-size: 30px;   /*changed from 30px*/
             font-weight: 600;  /*added*/
+            margin: 0;
         }
         svg{
             color:$button-color ;    
