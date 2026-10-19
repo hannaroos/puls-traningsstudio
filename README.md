@@ -1,10 +1,12 @@
 Puls träningsstudio
 
 Om projektet
+
 Detta projekt är en del av kursen HTML, CSS och tillgänglighet. 
 Syftet med projektet är att skapa en komplett, responsiv och tillgänglig webbplats från en mockup vi valt. 
 
 Vald webbplats
+
 Vi har valt Puls träningstudio mockup att återskapa.
 
 Gruppmedlemar
@@ -13,6 +15,7 @@ Gruppmedlemar
 - Amal Sami Abdellatif Ahmed
 
 Kompilera SASS
+
 Projektet använder SASS för att skapa en struktur. För att kompilera SASS behöver du installera extension Live Sass Compiler i Visual Studio Code.
 
 1. Installera extension Live Sass Compiler.
@@ -22,4 +25,5 @@ Projektet använder SASS för att skapa en struktur. För att kompilera SASS beh
 5. Länka sedan CSS-filen till HTML-filen som vanligt. 
 
 GitHub pages
+
 Länk till Github pages: https://hannaroos.github.io/puls-traningsstudio/ 
