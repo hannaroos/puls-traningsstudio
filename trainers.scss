@@ -42,9 +42,12 @@ body {
 
     .keyword {
       border-radius: $border-radius-prime;
-      border: 1px solid $text-secondary-color;
+      border: 0.5px solid $text-secondary-color;
       color: $text-secondary-color;
       font-family: $body-font;
+      
+        
+      
     }
   }
   .child + .child {
