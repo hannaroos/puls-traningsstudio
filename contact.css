@@ -207,8 +207,8 @@ h1, h2 {
 .contact-form__form fieldset legend {
   padding: 1rem 0;
 }
-.contact-form__form input, .contact-form__form textarea {
-  background-color: #14161B;
+.contact-form__form .text-field {
+  background-color: white;
   border: solid 1px #2A2E37;
 }
 .contact-form__form button {
