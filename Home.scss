@@ -3,143 +3,187 @@
 @use "header" as *;
 @use "footer" as *;
 
-
+* {
+  box-sizing: border-box;
+}
 body {
   background: $bg-color;
 }
-p{
-    color: $text-secondary-color ;
-    font-family: $body-font;
+p {
+  color: $text-secondary-color;
+  font-family: $body-font;
 }
-h2{
+h2 {
+  color: $text-primary-color;
+  font-family: $rubrik-font;
+}
+h3 {
+  color: $text-primary-color;
+  font-family: $rubrik-font;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+
+  h1 {
     color: $text-primary-color;
     font-family: $rubrik-font;
-}
-h3{
-    color: $text-primary-color;
-    font-family: $rubrik-font;
-}
-.container{
+    font-size: 80px;
+    align-self: flex-start;
+    span {
+      color: $button-color;
+    }
+  }
+
+  p {
+    color: $text-secondary-color;
+    align-self: flex-start;
+    transform: translateY(-50px);
+    font-size: 20px;
+  }
+  .child-btn {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    h1{
-        color: $text-primary-color;
-        font-family: $rubrik-font;
-        font-size: 80px;
-        align-self: flex-start;
-        span{
-            color: $button-color;
-        }
-    }
-    
-    p{
-       color: $text-secondary-color;
-       align-self: flex-start;
-       transform: translateY(-50px);
-       font-size: 20px;
-       
-       
-    }
-    .child-btn{
-        max-width: 500px;
-        display: flex;
-        flex-direction: column;
-        transform: translateY(-50px);
-        
-        button{
-            background: $button-color;
-            width: 400px;
-            height: 60px;
-            border-radius: $border-radius-prime;
-            margin-top: 20px;
-            color: $bg-color;
-            font-family: $body-font;
-            font-size: 20px;
-        }
-        .btn-1{
-            background: $bg-color;
-            width: 400px;
-            height: 60px;
-            border-radius: $border-radius-prime;
-            margin-top: 20px;
-            color: $text-primary-color;
-            font-family: $body-font;
-            font-size: 20px;
-            border: solid 1px $text-primary-color;
-        }
-
-    }
-    .child {
-        width: 400px;
-        height: 300px;
-        background: $border-p-color;
-        border-radius: $border-radius-prime;
-        display: flex;
-        justify-content: center;
-        p{
-            transform: translateY(100px);
-        }
-    }
-}
-.pop-pass{
-    display: flex;
+    transform: translateY(-50px);
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-     a{
-            align-self: start;
-            color: $links-color;
-            margin: 20px;
-        }
-    h2{
-        align-self: start;
-        font-size: 30px;
-    }
-    .child-1 {
-        height: 100px;
-        width: 400px;
-        justify-content: center;
-        align-items: center;
-        border-radius: $border-radius-prime;
-        background: $box-color;
-        margin: 15px;
-        p{
-            color: $links-color;
-        }
-    }
-    .child-2{
-       background: $button-color;
-       width: 400px;
-       height: 180px;
-       margin-top: 10px;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       border-radius: $border-radius-prime;
-       
-       .sec-btn{
-        background:$bg-color ;
-        color: $text-primary-color;
-        justify-self: center;
-        align-self: center;
-        width: 300px;
-        height: 50px;
-        border-radius: $border-radius-prime;
 
-       }
-       h3{
-        font-size: 40px;
-        margin: 15px;
-        color: $bg-color;
-       }
-       p{
-        align-self: flex-start;
-        color: $bg-color;
-        transform: translateX(50px);
-        margin: 5px;
-        padding-bottom: 10px;
-        
-       }
+    button {
+      background: $button-color;
+      width: 100%;
+      max-width: 500px;
+      height: 60px;
+      border-radius: $border-radius-prime;
+      margin-top: 20px;
+      color: $bg-color;
+      font-family: $body-font;
+      font-size: 20px;
     }
+    .btn-1 {
+      background: $bg-color;
+      width: 100%;
+      max-width: 500px;
+      height: 60px;
+      border-radius: $border-radius-prime;
+      margin-top: 20px;
+      color: $text-primary-color;
+      font-family: $body-font;
+      font-size: 20px;
+      border: solid 1px $text-primary-color;
+    }
+  }
+  .child {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    background: $border-p-color;
+    border-radius: $border-radius-prime;
+    display: flex;
+    justify-content: center;
+    p {
+      transform: translateY(100px);
+    }
+  }
+}
+.pop-pass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    align-self: start;
+    font-size: 30px;
+  }
+  .child-1 {
+    height: 100px;
+    width: calc(100% - 30px);
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-prime;
+    background: $box-color;
+    margin: 15px;
+    p {
+      color: $links-color;
+    }
+    
+}
+}
+.wrapped {
+    justify-content: center;
+    align-items: center;
+  a {
+    align-self: start;
+    color: $links-color;
+    margin: 20px;
+  }
+  .child-2 {
+    background: $button-color;
+    width: calc(100% - 20px);
+    max-width: $xxl;
+    height: 180px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: $border-radius-prime;
+    justify-self: center;
+
+    .sec-btn {
+      background: $bg-color;
+      color: $text-primary-color;
+      justify-self: center;
+      align-self: center;
+      width: 300px;
+      height: 50px;
+      border-radius: $border-radius-prime;
+    }
+    h3 {
+      font-size: 40px;
+      margin: 15px;
+      color: $bg-color;
+    }
+    p {
+      align-self: center;
+      color: $bg-color;
+      
+      margin: 5px;
+      padding-bottom: 10px;
+    }
+  }
+}
+@include tablet1 {
+  .container {
+    .child-btn {
+      flex-direction: row;
+    }
+    .child {
+      max-width: $sm;
+      width: calc(100% - 40px);
+      height: 400px;
+    }
+  }
+  .pop-pass {
+    flex-direction: row;
+    h2{
+        flex-direction: column;
+    }
+    
+    
+    .child-1 {
+      flex-direction: row;
+      width: calc(100% - 20px);
+      height: 150px;
+      margin: 8px;
+      p{
+        font-size: 12px;
+      }
+     
+
+    }
+  }
 }

@@ -6,6 +6,7 @@ header {
     background-color: $bg-color;
     position: sticky;
     top:0;
+    z-index: 1000;
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 1px $border-p-color;

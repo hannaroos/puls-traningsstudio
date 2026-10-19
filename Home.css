@@ -3,6 +3,7 @@ header {
   background-color: #14161B;
   position: sticky;
   top: 0;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px #2A2E37;
@@ -114,6 +115,10 @@ header nav {
   color: #FF8F5C;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #14161B;
 }
@@ -137,6 +142,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: auto;
 }
 .container h1 {
   color: #F2F3F5;
@@ -154,14 +160,17 @@ h3 {
   font-size: 20px;
 }
 .container .child-btn {
-  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   transform: translateY(-50px);
+  justify-content: center;
+  align-items: center;
 }
 .container .child-btn button {
   background: #FF7A3D;
-  width: 400px;
+  width: 100%;
+  max-width: 500px;
   height: 60px;
   border-radius: 8px;
   margin-top: 20px;
@@ -171,7 +180,8 @@ h3 {
 }
 .container .child-btn .btn-1 {
   background: #14161B;
-  width: 400px;
+  width: 100%;
+  max-width: 500px;
   height: 60px;
   border-radius: 8px;
   margin-top: 20px;
@@ -181,7 +191,8 @@ h3 {
   border: solid 1px #F2F3F5;
 }
 .container .child {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 300px;
   background: #2A2E37;
   border-radius: 8px;
@@ -198,18 +209,14 @@ h3 {
   align-items: center;
   flex-direction: column;
 }
-.pop-pass a {
-  align-self: start;
-  color: #FF8F5C;
-  margin: 20px;
-}
 .pop-pass h2 {
   align-self: start;
   font-size: 30px;
 }
 .pop-pass .child-1 {
   height: 100px;
-  width: 400px;
+  width: calc(100% - 30px);
+  max-width: 400px;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
@@ -219,17 +226,29 @@ h3 {
 .pop-pass .child-1 p {
   color: #FF8F5C;
 }
-.pop-pass .child-2 {
+
+.wrapped {
+  justify-content: center;
+  align-items: center;
+}
+.wrapped a {
+  align-self: start;
+  color: #FF8F5C;
+  margin: 20px;
+}
+.wrapped .child-2 {
   background: #FF7A3D;
-  width: 400px;
+  width: calc(100% - 20px);
+  max-width: 1400px;
   height: 180px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 8px;
+  justify-self: center;
 }
-.pop-pass .child-2 .sec-btn {
+.wrapped .child-2 .sec-btn {
   background: #14161B;
   color: #F2F3F5;
   justify-self: center;
@@ -238,15 +257,40 @@ h3 {
   height: 50px;
   border-radius: 8px;
 }
-.pop-pass .child-2 h3 {
+.wrapped .child-2 h3 {
   font-size: 40px;
   margin: 15px;
   color: #14161B;
 }
-.pop-pass .child-2 p {
-  align-self: flex-start;
+.wrapped .child-2 p {
+  align-self: center;
   color: #14161B;
-  transform: translateX(50px);
   margin: 5px;
   padding-bottom: 10px;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .container .child-btn {
+    flex-direction: row;
+  }
+  .container .child {
+    max-width: 576px;
+    width: calc(100% - 40px);
+    height: 400px;
+  }
+  .pop-pass {
+    flex-direction: row;
+  }
+  .pop-pass h2 {
+    flex-direction: column;
+  }
+  .pop-pass .child-1 {
+    flex-direction: row;
+    width: calc(100% - 20px);
+    height: 150px;
+    margin: 8px;
+  }
+  .pop-pass .child-1 p {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=Home.css.map */
