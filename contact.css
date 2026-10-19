@@ -65,6 +65,7 @@ header .logo p {
   font-family: "Barlow", sans-serif;
   font-size: 30px; /*changed from 30px*/
   font-weight: 600; /*added*/
+  margin: 0;
 }
 header .logo svg {
   color: #FF7A3D;
@@ -140,6 +141,7 @@ body {
   background-color: #14161B;
   color: #C9CCD3;
   font-family: "Barlow", sans-serif;
+  margin: 0;
 }
 body a {
   color: #FF8F5C;

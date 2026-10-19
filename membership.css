@@ -9,6 +9,11 @@ body {
   background-color: #14161B;
 }
 
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .container1 {
   display: flex;
   flex-direction: column;
@@ -89,6 +94,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   background-color: #FF7A3D;
+  background-color: #FF7A3D;
   color: #1C1F26;
   border-radius: 4px;
   font-size: 1rem;
@@ -100,7 +106,9 @@ body {
 }
 .container2 .medlemskap:hover .btn, .container2 .medlemskap:focus-within .btn {
   background-color: #FF7A3D;
+  background-color: #FF7A3D;
   color: #1C1F26;
+  border-color: #FF7A3D;
   border-color: #FF7A3D;
   font-weight: 600;
 }
@@ -129,7 +137,6 @@ body {
   height: fit-content;
   font-size: 1.3rem;
   font-family: "Barlow", sans-serif;
-  font-family: "Barlow", sans-serif;
   text-align: left;
 }
 .container3 .table-wrapper .table th {
@@ -142,14 +149,18 @@ body {
   padding: 1rem;
   border-top: 2px solid #2A2E37;
 }
-
-.container4 {
+.container3 .table-wrapper .table td {
+  color: #C9CCD3;
+  padding: 1rem;
+  border-top: 2px solid #2A2E37;
+}
+.container3 .container4 {
   display: flex;
   flex-direction: column;
   margin: 1.9rem;
   gap: 1rem;
 }
-.container4 h2 {
+.container3 .container4 h2 {
   font-size: 1.5rem;
   font-weight: 600;
   font-family: "Barlow Condensed", sans-serif;
@@ -158,7 +169,7 @@ body {
   margin-bottom: 1rem;
   font-size: 1.6rem;
 }
-.container4 details {
+.container3 .container4 details {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
@@ -167,7 +178,7 @@ body {
   background-color: #1C1F26;
   padding: 1rem;
 }
-.container4 details summary {
+.container3 .container4 details summary {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   color: #C9CCD3;
@@ -175,36 +186,36 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
-.container4 details summary:focus-visible {
+.container3 .container4 details summary:focus-visible {
   outline: 2px solid #FF8F5C;
   outline-offset: 2px;
   border-radius: 3px;
 }
-.container4 details p {
+.container3 .container4 details p {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   color: #C9CCD3;
   padding: 0.5rem;
 }
-.container4 details[open] {
+.container3 .container4 details[open] {
   border-color: #FF7A3D;
 }
-.container4 details[open] summary::marker {
+.container3 .container4 details[open] summary::marker {
   color: #FF7A3D;
 }
-
 @media (min-width: 768px) {
-  .container1 h1 {
+  .container3 .container1 h1 {
     font-size: 3rem;
   }
-  .container1 p {
+  .container3 .container1 p {
     font-size: 1.5rem;
   }
-  .container2 {
+  .container3 .container2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 header {
   display: flex;
   background-color: #14161B;
@@ -272,6 +283,7 @@ header .logo p {
   font-family: "Barlow", sans-serif;
   font-size: 30px; /*changed from 30px*/
   font-weight: 600; /*added*/
+  margin: 0;
 }
 header .logo svg {
   color: #FF7A3D;

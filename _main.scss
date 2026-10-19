@@ -1,6 +1,12 @@
 @use "variables.scss" as *;
 @use "mixins.scss" as *;
 
+// En container för main till desktop
+
+.container {
+    @include container    
+}
+
 .container1 {
     @include flex;
     justify-content: flex-start;
@@ -164,4 +170,5 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-}               
+}
+}
