@@ -1,5 +1,6 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use "variables.scss" as *;
+@use "mixins.scss" as *;
+
 
 header {
     display: flex;
@@ -13,103 +14,105 @@ header {
     height: 80px;
     .nav-desktop{
         display: none;
-    }
-  nav {
-    display: flex;
-    
-    
-    
-
-    summary {
-      color: black;
-      background: $button-color;
-      border-radius: $border-radius-prime;
-      list-style: none;
-      font-size: 25px;
-      font-family: $rubrik-font;
-      height: 40px;
-      width: 90px;
-      padding-top: 0px;
-      padding-left: 10px;
-      
-      
-
-    }
-    summary::-webkit-details-marker {
-        display: none;
-    }
-    details[open] > summary {
-        font-size: 0;
-      box-sizing: border-box;
-      display: flex;
-      
-      align-items: center;
-      justify-content: center;
-      height: 20px;
-      width: 20px;
-      padding: 0;
-      justify-self: end;
-      
-        &::after {
-            content: "x";
-        font-size: 20px;
-        line-height: 5;
-        }
-    }
-    a {
-      color: $links-color;
-      text-decoration: none;
-      
-      margin: 5px;
-      justify-self: auto;
-      
-      
-    }
-  }
-  .logo{
-    display: flex;
-    
-    p{
-        color: $text-primary-color;
-        font-family: $body-font;
-        position: absolute;
-        top: -10px;
-        left: 60px;
-        font-size: 30px;
         
-
     }
-    svg{
-        color:$button-color ;
-        position: absolute;
-        top: 25px;
-        
-        width: 50px;
-    }
-  }
-}
-header nav{
-    display: flex;
-    align-items:center;
-    margin-top: 20px;
-}
-@include desktop {
-    header {
-       nav {
-        details{
-            display: none;
-        }
-       }
-        .nav-desktop{
-            display: flex;
-            a{
-                color: $text-primary-color;
-                margin-right: 20px;
-                &:hover{
-                    color: $links-color;
-                    border-bottom: solid 1px $links-color;
-                }
+    nav {
+        display: flex;
+        summary {
+            color: black;
+            background: $button-color;
+            border-radius: $border-radius-prime;
+            list-style: none;
+            font-size: 25px;
+            font-family: $rubrik-font; 
+            height: 40px;
+            width: 90px;
+            padding-top: 0px;
+            padding-left: 10px;
+            &::-webkit-details-marker {
+                display: none;
             }
         }
+        details[open] > summary {
+            font-size: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            width: 20px;
+            padding: 0;
+            justify-self: end;
+            &::after {
+                content: "x";
+                font-size: 20px;
+                line-height: 5;
+            }
+        }
+        a {
+            color: $links-color;
+            text-decoration: none;
+            margin: 5px;
+            justify-self: auto;
+            font-family: $rubrik-font;    /*add font-family*/
+            
+        }   
     }
+    .logo{
+        display: flex;
+        // align-items: center;
+        // gap: 5px;
+        // margin-left: 10px;
+        p {
+            color: $text-primary-color;
+            font-family: $body-font;
+            position: absolute;
+            top: 25px;  /*changed from -10 to 25 */  
+            left: 60px;  
+            font-size: 25px;   /*changed from 30px*/
+            font-weight: 600;  /*added*/
+        }
+        svg{
+            color:$button-color ;
+            position: absolute;
+            top: 28px;       /*changed from 25px*/
+            width: 80px;     /*changed from 60 to 80*/
+            
+        }
+    }
+}
+header nav{ 
+    // display:flex;
+    align-items:center;
+    margin-top: 4px;   /*changed from 20px to 4px*/
+    padding: 20px;  /*added*/
+}
+            
+@include desktop {
+    header {
+        nav {
+            details{
+                display: none;
+            }
+            .nav-desktop{
+                display: flex;
+                a {
+                    color: $text-primary-color;
+                    margin-right: 20px;
+                    padding: 10px;  /*added*/
+                    font-weight: 500;  /*added*/
+                    &:hover{
+                        color: $links-color;
+                        // border-bottom: solid 1px $links-color;
+                    }
+                    /*added*/
+                    &[aria-current="page"] {
+                        color: $links-color;
+                        border-bottom: 2px solid $links-color;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }        
+    }   
 }

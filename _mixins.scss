@@ -1,5 +1,36 @@
-@use "variables" as *;
+@use "variables.scss" as *;
 
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+}
+@mixin title ($fontWeight: 600, $fontSize: 1.5rem) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    font-family: $rubrik-font;
+    color: $text-primary-color;
+    text-transform: uppercase;
+}
+@mixin text ($fontsize: 1rem) {
+    font-size: $fontsize;
+    font-family: $body-font;
+    color: $text-secondary-color;
+    
+}
+@mixin focus-visible {
+    outline: 2px solid $links-color;
+    outline-offset: 2px;
+    border-radius:3px;
+}
+@mixin table {
+    color: $text-secondary-color;
+    padding: $padding;
+}
+@mixin btn {
+    color: $text-primary-color;
+    background-color: $box-color;
+}
 @mixin tablet {
     @media (min-width: 768px) {
         @content;
@@ -10,16 +41,26 @@
         @content;
     }
 }
-
+// Liknande mixins som ovan men med lite andra värden samt använder mig av variabler:
 @mixin tablet1 {
     @media (min-width: $sm) and (max-width: $lg) {
         @content;
     }
 }
-
 @mixin desktop1 {
     @media (min-width: $lg) {
         @content;
     }
 }
-
+//mixin för container för dekstop
+@mixin container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+// mixin för gemensam knapp
+@mixin btn {    
+    background-color: $button-color;
+    border-radius: $border-radius-prime;
+    padding: 10px 20px;
+    border: none;
+}

@@ -12,85 +12,242 @@ body {
             color: $links-color;
         }
 }
-h1 {
+h1, h2 {
     font-family: $rubrik-font;
     color: $text-primary-color;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.8;    
+    margin-block: 0;
 }
 
 .contact-info {
+    margin-top: 1rem;    
     
-    address {
-        line-height: 1.8;        
+    &__address {
+        line-height: 1.8;
+        margin-bottom: 1rem;            
     }
     
-    &__map {
-        width: 350px;
-        height: 300px;
-        padding: 20px 0;
-    }
+    &__opening {        
+        margin-top: 1rem;
+        border-top: solid 1px $border-p-color; 
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        line-height: 1.8;
 
-        &__opening {
-            border-top: solid 1px $border-p-color; 
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            line-height: 1.8;
-        }
-
-            span {
-                border-bottom: solid 1px $border-p-color; 
+        span {
+            border-bottom: solid 1px $border-p-color;                                
             }
+    }
+
+    &__map {
+        width: 95%;
+        min-height: 300px;
+        margin-top: 2rem;
+        border-radius: $border-radius-prime;
+        display: grid;        
+        grid-template-columns: 1fr;
+    }
 }
 
 .contact-form {
-    padding: 20px;
+    margin-top: 3rem;
+    padding: 0 2rem;
     background-color: $box-color;
     border-radius: $border-radius-prime;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
+
+        h2 {
+            font-size: 1.5rem;
+        }
 
         &__form {
             display: flex;
             flex-direction: column;
-            gap: 10px;    
-        }          
+            gap: 1rem;   
+            
+                
+            fieldset {
+                padding: 0;
+                border: none;
+            
+                    legend {
+                        padding: 1rem 0;
+                    }
+            }
 
             input, textarea {
-                background-color: $bg-color;
-                border: solid 1px $border-p-color;
-                accent-color: $button-color;
+                    background-color: $bg-color;
+                    border: solid 1px $border-p-color;
             }
 
             button {
                 background-color: $button-color;
                 align-self: flex-start;
                 border: solid 1px $border-p-color;
-                padding: 10px;
+                padding: 1rem;
                 border-radius: $border-radius-prime;
+                // @include btn;
             }
+        }
+
+        &__option {
+            border: solid 1px $border-p-color;
+            margin-right: 0.5rem;
+            padding: 0.1rem;                
+        }
 }
 
 // Media queries mobile first
 
-// @media screen and (min-width:576px) {
-//     body {
-//         max-width: 576px;
-//     }
-// }
+@include tablet1 {
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        grid-template-areas:
+        "contact opening-hours"
+        "address opening-hours"
+        "map map";   
 
-// @media screen and (min-width:992px) {
-//     body {
-//         max-width: 992px;
-//     }
-// }
+        h1 {
+            margin-left: 1rem;
+        }
+        
+            &__address {
+                margin-left: 1rem;
+            }
 
-// @media screen and (min-width:1200px) {
-//     body {
-//         max-width: 1200px;
-//     }
-// }
+            &__opening-hours {
+                margin-right: 1rem;
+            }
 
-// @media screen and (min-width:1536px) {
-//     body {
-//         max-width: 1536px;
-//     }
-// }
+            &__map {
+                width: 98%
+            }
+    }      
+
+    .contact-form {
+        &__option {
+                border: solid 1px $border-p-color;
+                margin-right: 1rem;
+                padding: 0.5rem;
+            }
+    }
+}
+
+@include desktop1 {
+    .container {
+        @include container
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        grid-template-areas:
+        "contact-info contact-form"
+        "contact-info contact-form"
+        "contact-info contact-form";
+        
+        h1{
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "contact"
+            "map"
+            "address"
+            "opening-hours";
+
+                &__map {
+                    width: 100%;
+                    min-height: 350px;
+                }
+
+                &__address {
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    font-size: 1.2rem;
+                }
+
+                span {
+                    padding: 0.5rem 0;
+                    font-size: 1.2rem;
+                }
+        }
+
+        .contact-form {
+            height: 850px;  
+
+            h2 {
+                font-size: 2.5rem;
+                padding: 1rem;
+            }
+
+            &__option {                
+                margin-right: 1rem;
+                padding: 0.5rem;            
+            } 
+
+            &__label {
+                margin: 0rem 1rem;
+            }
+
+                &__form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 850px;
+                    flex: 1;                 
+
+                    fieldset {
+                        margin: 5px;
+                    }
+                    
+                    legend {
+                        font-size: 1.2rem;
+
+                    }                      
+            
+                    label {
+                        font-size: 1.2rem;
+                        
+                    }
+
+                    input[type="text"] {
+                        height: 3rem;
+                        margin: 0 1rem;
+                    }
+
+                    input[type="email"] {
+                        height: 3rem;
+                        margin: 0 1rem;
+                    }
+
+                    textarea {
+                        height: 10rem;
+                        margin: 0 1rem;
+                    }
+
+                    button {
+                        @include btn;
+                        margin: 1rem 1rem;
+                        padding: 1rem 2rem;
+                        font-size: 1.2rem;
+                    }                   
+                }
+            }    
+        }
+    }
