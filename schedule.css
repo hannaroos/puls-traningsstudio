@@ -273,7 +273,7 @@ header nav {
 
 @media (min-width: 576px) and (max-width: 992px) {
   .container1 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 2rem 0;
   }
   .container2 {
@@ -282,14 +282,14 @@ header nav {
     margin-bottom: 2rem;
   }
   .table-wrapper .table-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     font-family: "Barlow Condensed", sans-serif;
     color: #F2F3F5;
     text-transform: uppercase;
   }
   .table-wrapper .table tr th {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 1.4rem;
   }
   .table-wrapper .table tr td {
@@ -317,7 +317,7 @@ header nav {
   }
   .container1 h1 {
     font-size: 4rem;
-    margin-top: 5rem;
+    line-height: 1.8;
   }
   .container2 {
     flex-direction: row;

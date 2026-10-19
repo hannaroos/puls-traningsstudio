@@ -149,6 +149,9 @@ body {
 .rubrik h1 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
+  font-size: 2rem;
+  line-height: 1.8;
+  text-transform: uppercase;
 }
 .rubrik p {
   color: #C9CCD3;
@@ -189,6 +192,7 @@ body {
 .container h2 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.5rem;
 }
 .container p {
   color: #C9CCD3;
@@ -197,6 +201,7 @@ body {
 .container h2 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.5rem;
 }
 .container a {
   color: #FF8F5C;
@@ -268,7 +273,10 @@ body {
 }
 @media (min-width: 1024px) {
   .rubrik h1 {
-    font-size: 50px;
+    font-size: 4rem;
+    line-height: 1.8;
+    font-weight: 700;
+    text-transform: uppercase;
   }
   .container {
     flex-direction: row;
