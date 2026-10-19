@@ -31,6 +31,13 @@
     color: $text-primary-color;
     background-color: $box-color;
 }
+
+//mixin container för desktop
+@mixin container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 @mixin tablet {
     @media (min-width: 768px) {
         @content;
