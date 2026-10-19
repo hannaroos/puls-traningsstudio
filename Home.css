@@ -50,6 +50,7 @@ header nav a {
   text-decoration: none;
   margin: 5px;
   justify-self: auto;
+  font-family: "Barlow Condensed", sans-serif; /*add font-family*/
 }
 header .logo {
   display: flex;
@@ -58,37 +59,47 @@ header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
   position: absolute;
-  top: -10px;
+  top: 25px; /*changed from -10 to 25 */
   left: 60px;
-  font-size: 30px;
+  font-size: 25px; /*changed from 30px*/
+  font-weight: 600; /*added*/
 }
 header .logo svg {
   color: #FF7A3D;
   position: absolute;
-  top: 25px;
-  width: 50px;
+  top: 28px; /*changed from 25px*/
+  width: 80px; /*changed from 60 to 80*/
 }
 
 header nav {
-  display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 4px; /*changed from 20px to 4px*/
+  padding: 20px; /*added*/
 }
 
 @media (min-width: 1024px) {
   header nav details {
     display: none;
   }
-  header .nav-desktop {
+  header nav .nav-desktop {
     display: flex;
   }
-  header .nav-desktop a {
+  header nav .nav-desktop a {
     color: #F2F3F5;
     margin-right: 20px;
+    padding: 10px; /*added*/
+    font-weight: 500; /*added*/
   }
-  header .nav-desktop a:hover {
+  header nav .nav-desktop a:hover {
     color: #FF8F5C;
-    border-bottom: solid 1px #FF8F5C;
+  }
+  header nav .nav-desktop a {
+    /*added*/
+  }
+  header nav .nav-desktop a[aria-current=page] {
+    color: #FF8F5C;
+    border-bottom: 2px solid #FF8F5C;
+    padding-bottom: 10px;
   }
 }
 .footer {
@@ -99,7 +110,7 @@ header nav {
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
   padding: 25px; /* 10px 0px;*/
-  margin-top: 50px;
+  margin-top: 50px; /*100px*/
 }
 .footer address {
   align-self: center;

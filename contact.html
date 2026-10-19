@@ -14,70 +14,98 @@
 
     <header>
         <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"/>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5" />
             </svg>
-            <h1>PULS</h1>
+            <p>PULS</p>
         </div>
         <nav>
             <details>
                 <summary>Meny ☰</summary>
-                <a href="#">Start</a>
+                <a href="index.html">Start</a>
                 <a href="#">Schema</a>
-                <a href="#">Medlemsskap</a>
-                <a href="#">Tränare</a>
-                <a href="#">Kontakt</a>
+                <a href="membership.html">Medlemsskap</a>
+                <a href="trainers.html">Tränare</a>
+                <a href="contact.html">Kontakt</a>                
             </details>
+            <div class="nav-desktop">
+                <a href="index.html">Start</a>
+                <a href="#">Schema</a>
+                <a href="membership.html">Medlemsskap</a>
+                <a href="trainers.html">Tränare</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
         </nav>
-
     </header>
 
-    <main>
-        <section class="contact-info">
-            <h1>KONTAKT</h1>
-                <address>
-                    Industrigatan 18<br>
-                    123 45 Hamnstad<br>                
-                    <a href="tel:0107654321">010-765 43 21</a><br>
-                    <a href="mailto:hej@pulsstudio.se">hej@pulsstudio.se</a>
-                </address>
-                <h2>BEMANNADE TIDER</h2>
-                <div class="contact-info__opening">
-                    <span>Måndag-fredag</span>
-                    <span>06-21</span>
-                    <span>Lördag</span> 
-                    <span>09-15</span>
-                    <span>Söndag</span> 
-                    <span>Obemannat</span>
+    <div class="container">
+        <main>
+            <section class="contact-info" style="grid-area: contact-info">
+                <h1 style="grid-area: contact">Kontakt</h1>
+                <div class="contact-info__address" style="grid-area: address">
+                    <address>
+                        Industrigatan 18<br>
+                        123 45 Hamnstad<br>                
+                        <a href="tel:0107654321">010-765 43 21</a><br>
+                        <a href="mailto:hej@pulsstudio.se">hej@pulsstudio.se</a>
+                    </address>
                 </div>
-            <iframe class="contact-info__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.7251446524654!2d18.023520034908138!3d59.33754254472136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d7f2e8f74cb%3A0x21c782a641ac6c11!2sIndustrigatan%2018%2C%20112%2046%20Stockholm!5e0!3m2!1ssv!2sse!4v1791819279138!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <div class="contact-info__opening-hours" style="grid-area: opening-hours">
+                    <h2>Bemannade tider</h2>
+                        <div class="contact-info__opening">
+                            <span>Måndag-fredag</span>
+                            <span>06-21</span>
+                            <span>Lördag</span> 
+                            <span>09-15</span>
+                            <span>Söndag</span> 
+                            <span>Obemannat</span>
+                        </div>
+                </div>
+                <iframe class="contact-info__map" style="grid-area: map" title="En karta som visar var träningsstudio ligger" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.7251446524654!2d18.023520034908138!3d59.33754254472136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d7f2e8f74cb%3A0x21c782a641ac6c11!2sIndustrigatan%2018%2C%20112%2046%20Stockholm!5e0!3m2!1ssv!2sse!4v1791819279138!5m2!1ssv!2sse" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
-        </section>
+            </section>
 
-        <section class="contact-form">
-            <h2>SKRIV TILL OSS</h2>
-
-            <form class="contact-form__form">
-                <fieldset>
-                    <legend>Vad gäller det?</legend>
-                    <input type="radio" id="medlemskap" name="ärende" value="medlemskap">
-                    <label for="medlemskap">Medlemskap</label>
-                    <input type="radio" id="PT" name="ärende" value="PT">
-                    <label for="PT">PT</label>               
-                    <input type="radio" id="övrigt" name="ärende" value="övrigt">
-                    <label for="övrigt">Övrigt</label>
-                </fieldset>            
-                <label for="namn">Namn</label>
-                <input type="text" id="namn" name="namn">
-                <label for="email">E-post</label>
-                <input type="email" id="email" name="email">
-                <label for="meddelande">Meddelande</label>
-                <textarea id="meddelande" name="meddelande"></textarea>
-                <button type="submit">Skicka</button>           
-            </form>
-        </section>
-    </main>
+            <section class="contact-form" style="grid-area: contact-form">
+                <h2>Skriv till oss</h2>
+                <form class="contact-form__form">
+                    <fieldset>
+                        <legend>Vad gäller det?</legend>
+                        <span class="contact-form__option">
+                        <input type="radio" id="medlemskap" name="ärende" value="medlemskap">
+                        <label for="medlemskap">Medlemskap</label>
+                        </span>
+                        <span class="contact-form__option">
+                        <input type="radio" id="PT" name="ärende" value="PT">
+                        <label for="PT">PT</label> 
+                        </span>
+                        <span class="contact-form__option">             
+                        <input type="radio" id="övrigt" name="ärende" value="övrigt">
+                        <label for="övrigt">Övrigt</label>
+                        </span> 
+                    </fieldset>            
+                    <label class="contact-form__label" for="namn">Namn</label>
+                    <input type="text" id="namn" name="namn" class="text-field">
+                    <label class="contact-form__label" for="email">E-post</label>
+                    <input type="email" id="email" name="email" class="text-field">
+                    <label class="contact-form__label" for="meddelande">Meddelande</label>
+                    <textarea id="meddelande" name="meddelande" class="text-field"></textarea>
+                    <button type="submit">Skicka</button>           
+                </form>
+            </section>
+        </main>
+    </div>
 
     <footer class="footer">
         <h2>Puls träningsstudio</h2>
@@ -85,11 +113,10 @@
             Industrigatan 18, 123 45 Hamnstad<br>
             <a href="tel:0107654321">010-765 43 21</a>
          </address>
-         <!-- <div>
+         <div>
             <p>Bemannat vardagar 06-21</p>
             <p>Öppet för medlemmar 05-23</p>
-         </div> -->
-
+         </div>
     </footer>
 
 </body>
