@@ -9,43 +9,36 @@
     font-family: $body-font;
     border-top: solid 1px $border-p-color;
     padding: 25px;               /* 10px 0px;*/
-    margin-top: 50px;
-
-    
+    margin-top: 50px;            /*100px*/
     address {
         align-self: center;
         line-height: 1.8;
     }
-
     h2 {
         font-family: $rubrik-font;
         text-transform: uppercase;
         color: $text-primary-color;
-    }
-
+        // margin-left: 10px; 
+     }
     a {
         color: $links-color;
     }
-    
-
     div {
         display: none;
     }
 }
-
 @include tablet1 {
     .footer {
         div {
-            display: unset;
+            display: unset;          
         }
     }    
 }
-
 @include desktop1 {
     .footer {
         div {
             display: unset;
+            // margin-right: 10px;
         }
     }    
 }
-    

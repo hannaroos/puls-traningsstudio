@@ -15,11 +15,8 @@ header {
         display: none;
         
     }
-    
     nav {
         display: flex;
-    
-        
         summary {
             color: black;
             background: $button-color;
@@ -31,14 +28,10 @@ header {
             width: 90px;
             padding-top: 0px;
             padding-left: 10px;
-            
-            
-            
             &::-webkit-details-marker {
                 display: none;
             }
         }
-    
         details[open] > summary {
             font-size: 0;
             box-sizing: border-box;
@@ -49,14 +42,12 @@ header {
             width: 20px;
             padding: 0;
             justify-self: end;
-            
             &::after {
                 content: "x";
                 font-size: 20px;
                 line-height: 5;
             }
         }
-
         a {
             color: $links-color;
             text-decoration: none;
@@ -66,69 +57,61 @@ header {
             
         }   
     }
-      
-
-
     .logo{
         display: flex;
-    
+        // align-items: center;
+        // gap: 5px;
+        // margin-left: 10px;
         p {
             color: $text-primary-color;
             font-family: $body-font;
             position: absolute;
             top: 25px;  /*changed from -10 to 25 */  
             left: 60px;  
-            font-size: 25px;   /*changed*/
+            font-size: 25px;   /*changed from 30px*/
             font-weight: 600;  /*added*/
         }
-
         svg{
             color:$button-color ;
             position: absolute;
-            top: 28px;       /*changed*/
+            top: 28px;       /*changed from 25px*/
             width: 80px;     /*changed from 60 to 80*/
             
         }
     }
 }
 header nav{ 
+    // display:flex;
     align-items:center;
     margin-top: 4px;   /*changed from 20px to 4px*/
     padding: 20px;  /*added*/
 }
-
-    
-
+            
 @include desktop {
     header {
         nav {
             details{
                 display: none;
             }
-       
             .nav-desktop{
                 display: flex;
-                
                 a {
                     color: $text-primary-color;
                     margin-right: 20px;
                     padding: 10px;  /*added*/
                     font-weight: 500;  /*added*/
-
                     &:hover{
                         color: $links-color;
                         // border-bottom: solid 1px $links-color;
                     }
-
                     /*added*/
                     &[aria-current="page"] {
                         color: $links-color;
                         border-bottom: 2px solid $links-color;
                         padding-bottom: 10px;
                     }
-
                 }
             }
-        }
-    }
+        }        
+    }   
 }

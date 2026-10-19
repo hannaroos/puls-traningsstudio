@@ -267,13 +267,13 @@ header .logo p {
   position: absolute;
   top: 25px; /*changed from -10 to 25 */
   left: 60px;
-  font-size: 25px; /*changed*/
+  font-size: 25px; /*changed from 30px*/
   font-weight: 600; /*added*/
 }
 header .logo svg {
   color: #FF7A3D;
   position: absolute;
-  top: 28px; /*changed*/
+  top: 28px; /*changed from 25px*/
   width: 80px; /*changed from 60 to 80*/
 }
 
@@ -316,7 +316,7 @@ header nav {
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
   padding: 25px; /* 10px 0px;*/
-  margin-top: 50px;
+  margin-top: 50px; /*100px*/
 }
 .footer address {
   align-self: center;
