@@ -13,13 +13,7 @@
         line-height: 1.3;
     }
     p {
-<<<<<<<<< Temporary merge branch 1
-        @include text; 
-=========
-        font-family: $body-font;
-        color: $text-secondary-color;
-        font-size: 1rem; 
->>>>>>>>> Temporary merge branch 2
+        @include text;
     }
 }
 .container2 {
