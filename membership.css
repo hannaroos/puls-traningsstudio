@@ -28,8 +28,8 @@ body {
   color: #F2F3F5;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.3;
+  font-size: 4rem;
+  line-height: 1.8;
 }
 .container1 p {
   font-size: 1rem;
@@ -56,7 +56,7 @@ body {
   gap: 1.5rem;
 }
 .container2 .medlemskap h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
@@ -118,7 +118,7 @@ body {
   padding: 0rem 2rem;
 }
 .container3 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
@@ -154,22 +154,22 @@ body {
   padding: 1rem;
   border-top: 2px solid #2A2E37;
 }
-.container3 .container4 {
+
+.container4 {
   display: flex;
   flex-direction: column;
   margin: 1.9rem;
   gap: 1rem;
 }
-.container3 .container4 h2 {
-  font-size: 2rem;
+.container4 h2 {
+  font-size: 2.5rem;
   font-weight: 700;
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 1.6rem;
 }
-.container3 .container4 details {
+.container4 details {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
@@ -178,7 +178,7 @@ body {
   background-color: #1C1F26;
   padding: 1rem;
 }
-.container3 .container4 details summary {
+.container4 details summary {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   color: #C9CCD3;
@@ -186,36 +186,61 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
-.container3 .container4 details summary:focus-visible {
+.container4 details summary:focus-visible {
   outline: 2px solid #FF8F5C;
   outline-offset: 2px;
   border-radius: 3px;
 }
-.container3 .container4 details p {
+.container4 details p {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   color: #C9CCD3;
   padding: 0.5rem;
 }
-.container3 .container4 details[open] {
+.container4 details[open] {
   border-color: #FF7A3D;
 }
-.container3 .container4 details[open] summary::marker {
+.container4 details[open] summary::marker {
   color: #FF7A3D;
 }
-@media (min-width: 768px) {
-  .container3 .container1 h1 {
-    font-size: 3rem;
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .container1 h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #F2F3F5;
+    text-transform: uppercase;
   }
-  .container3 .container1 p {
+  .container1 p {
     font-size: 1.5rem;
   }
-  .container3 .container2 {
+  .container2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .container2 .medlemskap h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #F2F3F5;
+    text-transform: uppercase;
+  }
+  .container3 h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #F2F3F5;
+    text-transform: uppercase;
+  }
+  .container4 h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #F2F3F5;
+    text-transform: uppercase;
+  }
 }
-
 header {
   display: flex;
   background-color: #14161B;
@@ -333,10 +358,12 @@ header nav {
   align-self: center;
   line-height: 1.8;
 }
-.footer h2 {
+.footer__title {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   color: #F2F3F5;
+  font-weight: 700;
+  font-size: 30px;
 }
 .footer a {
   color: #FF8F5C;

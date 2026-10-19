@@ -127,7 +127,7 @@
 @include tablet1 {
     .container1 {
         h1 {        
-            font-size: 3rem;
+            font-size: 2rem;
             padding: 2rem 0;
         }
     }
@@ -140,13 +140,13 @@
 
     .table-wrapper {
         .table-title {
-            @include title ($fontWeight: 700, $fontSize: 2rem);
+            @include title ($fontWeight: 700, $fontSize: 1.5rem);
         }
 
         .table {
             tr {
                 th {
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                     padding: 1.4rem;
                 }
 
@@ -180,7 +180,7 @@
 
         h1 {        
             font-size: 4rem;
-            margin-top: 5rem;
+            line-height: 1.8;
         }
     }
 

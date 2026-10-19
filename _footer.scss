@@ -14,12 +14,15 @@
         align-self: center;
         line-height: 1.8;
     }
-    h2 {
+    &__title {
         font-family: $rubrik-font;
         text-transform: uppercase;
         color: $text-primary-color;
+        font-weight: 700;
+        font-size: 30px;
         // margin-left: 10px; 
-     }
+    }
+    
     a {
         color: $links-color;
     }
