@@ -9,7 +9,7 @@
     h1 {
         @include title;
         font-weight: 700;
-        font-size: 2rem;
+        font-size: $title-size;
         line-height: 1.3;
     }
     p {
@@ -35,7 +35,7 @@
         }
         p {
             @include text;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
         .price {
             color: $text-primary-color;
@@ -50,6 +50,7 @@
             padding: 0.5rem;
             margin-top: auto;
             font-size: 1.2rem;
+            font-family: $body-font;
             border-radius: 4px;
             text-align: center;
             align-self: center;
@@ -59,7 +60,6 @@
         }
         .info {
             width: fit-content;
-            background-color: $button-color;
             background-color: $button-color;
             color:$box-color;
             border-radius: 4px;
@@ -106,11 +106,10 @@
             td {
                 @include table;
                 border-top: $border;
+                color: $text-secondary-color;
+                padding: 1rem;
+                border-top: 2px solid $border-p-color;
             }
-        td {
-            color: $text-secondary-color;
-            padding: 1rem;
-            border-top: 2px solid $border-p-color;
         }
     } 
 }       
@@ -121,7 +120,6 @@
     h2 {
         @include title;
         margin-bottom: 1rem;
-        font-size: 1.6rem;
     }    
     details {
         height: fit-content;
@@ -154,14 +152,80 @@
 @include tablet {
     .container1{
         h1{
-            font-size: 3rem;
+            font-size: $title-size;
         }
         p{
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    .container2{
+        h2 {
+            font-size: $subheading-size;
+        }
+        p{
+            font-size: 1.3rem;
         }
     }
     .container2 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        h2 {
+            font-size: $subheading-size;
+        }
+        p{
+            font-size: 1.3rem;
+        }
     }
-}               
+    .container4{
+        h2{
+            font-size: $subheading-size;
+        }
+        summary{
+            font-size: $subheading-size;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
+}
+@include desktop {
+    .container1{
+        h1{
+            font-size:$title-size-desktop;
+            
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        h2{
+            font-size: $subheading-size-desktop;
+        }
+        p{
+            font-size: $subheading-size;
+        }
+    }
+    .container3{
+        h2{
+            font-size: $subheading-size-desktop;
+        }
+        th, td{
+            font-size: $subheading-size;
+        }
+    }
+    .container4{
+        h2{
+            font-size: $subheading-size-desktop;
+        }
+        summary{
+            font-size: $subheading-size-desktop;
+        }
+        p{
+            font-size: $subheading-size;
+        }
+    }
+}

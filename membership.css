@@ -61,7 +61,7 @@ body {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   color: #C9CCD3;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .container2 .medlemskap .price {
   color: #F2F3F5;
@@ -76,6 +76,7 @@ body {
   padding: 0.5rem;
   margin-top: auto;
   font-size: 1.2rem;
+  font-family: "Barlow", sans-serif;
   border-radius: 4px;
   text-align: center;
   align-self: center;
@@ -100,7 +101,9 @@ body {
 }
 .container2 .medlemskap:hover .btn, .container2 .medlemskap:focus-within .btn {
   background-color: #FF7A3D;
+  background-color: #FF7A3D;
   color: #1C1F26;
+  border-color: #FF7A3D;
   border-color: #FF7A3D;
   font-weight: 600;
 }
@@ -129,7 +132,6 @@ body {
   height: fit-content;
   font-size: 1.3rem;
   font-family: "Barlow", sans-serif;
-  font-family: "Barlow", sans-serif;
   text-align: left;
 }
 .container3 .table-wrapper .table th {
@@ -138,6 +140,9 @@ body {
   background-color: #1C1F26;
 }
 .container3 .table-wrapper .table td {
+  color: #C9CCD3;
+  padding: 1rem;
+  border-top: 2px solid #2A2E37;
   color: #C9CCD3;
   padding: 1rem;
   border-top: 2px solid #2A2E37;
@@ -156,7 +161,6 @@ body {
   color: #F2F3F5;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 1.6rem;
 }
 .container4 details {
   height: -moz-fit-content;
@@ -195,7 +199,40 @@ body {
 
 @media (min-width: 768px) {
   .container1 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .container1 p {
+    font-size: 1.3rem;
+  }
+  .container2 h2 {
+    font-size: 1.5rem;
+  }
+  .container2 p {
+    font-size: 1.3rem;
+  }
+  .container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container2 h2 {
+    font-size: 1.5rem;
+  }
+  .container2 p {
+    font-size: 1.3rem;
+  }
+  .container4 h2 {
+    font-size: 1.5rem;
+  }
+  .container4 summary {
+    font-size: 1.5rem;
+  }
+  .container4 p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container1 h1 {
+    font-size: 4rem;
   }
   .container1 p {
     font-size: 1.5rem;
@@ -203,6 +240,27 @@ body {
   .container2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .container2 h2 {
+    font-size: 2.5rem;
+  }
+  .container2 p {
+    font-size: 1.5rem;
+  }
+  .container3 h2 {
+    font-size: 2.5rem;
+  }
+  .container3 th, .container3 td {
+    font-size: 1.5rem;
+  }
+  .container4 h2 {
+    font-size: 2.5rem;
+  }
+  .container4 summary {
+    font-size: 2.5rem;
+  }
+  .container4 p {
+    font-size: 1.5rem;
   }
 }
 header {
@@ -270,8 +328,8 @@ header .logo {
 header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
-  font-size: 30px; /*changed from 30px*/
-  font-weight: 600; /*added*/
+  font-size: 30px;
+  font-weight: 600;
 }
 header .logo svg {
   color: #FF7A3D;
@@ -321,7 +379,7 @@ header nav {
   align-self: center;
   line-height: 1.8;
 }
-.footer h2 {
+.footer p {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   color: #F2F3F5;
