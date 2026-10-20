@@ -16,7 +16,7 @@ body {
     h1 {
         @include title;
         font-weight: 700;
-        font-size: 2rem;
+        font-size: $title-size;
     }
 
     p{
@@ -130,7 +130,7 @@ body {
 @include tablet1 {
     .container1 {
         h1 {        
-            font-size: 2rem;
+            font-size: $title-size;
             padding: 2rem 0;
         }
     }
@@ -182,7 +182,8 @@ body {
         }
 
         h1 {        
-            font-size: 4rem;
+            font-size: $title-size-desktop;
+            margin-top: 5rem;
             line-height: 1.8;
         }
     }
@@ -235,9 +236,3 @@ body {
 
     }
 }
-
-    
-
-    
-    
-    
