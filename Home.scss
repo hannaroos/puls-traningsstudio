@@ -271,10 +271,14 @@ h3 {
     }
   }
   .container-1{
-    background: $border-p-color ;
+    background: $box-color ;
     height: 300px;
     border-radius: $border-radius-prime;
     position: relative;
+    margin: 1rem;
+    width: 100%;
+    justify-self: center;
+    
     
     .pop-pass {
       flex-direction: row;

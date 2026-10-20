@@ -393,10 +393,13 @@ h3 {
     width: 15%;
   }
   .container-1 {
-    background: #2A2E37;
+    background: #1C1F26;
     height: 300px;
     border-radius: 8px;
     position: relative;
+    margin: 1rem;
+    width: 100%;
+    justify-self: center;
   }
   .container-1 .pop-pass {
     flex-direction: row;
