@@ -139,6 +139,16 @@ header nav {
     display: unset;
   }
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #14161B;
+}
+
 body {
   min-height: 100vh;
   display: grid;

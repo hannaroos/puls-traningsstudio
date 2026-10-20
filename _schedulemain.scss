@@ -4,6 +4,9 @@
 
  /*Mobil first*/ 
    
+body {
+    @include page-layout;
+}
 
 .container1 {
     @include flex;
