@@ -12,7 +12,7 @@
     h1 {
         @include title;
         font-weight: 700;
-        font-size: 2rem;
+        font-size: $title-size;
     }
 
     p{
@@ -126,7 +126,7 @@
 @include tablet1 {
     .container1 {
         h1 {        
-            font-size: 3rem;
+            font-size: $title-size;
             padding: 2rem 0;
         }
     }
@@ -178,7 +178,7 @@
         }
 
         h1 {        
-            font-size: 4rem;
+            font-size: $title-size-desktop;
             margin-top: 5rem;
         }
     }

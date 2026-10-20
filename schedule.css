@@ -272,7 +272,7 @@ header nav {
 
 @media (min-width: 576px) and (max-width: 992px) {
   .container1 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 2rem 0;
   }
   .container2 {
