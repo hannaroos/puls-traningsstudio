@@ -1,11 +1,18 @@
 @use "variables.scss" as *;
 @use "mixins.scss"as *;
+@use "header" as *;
+@use "footer" as *;
+@use "base" as *;
 
 
  /*Mobil first*/ 
    
 body {
     @include page-layout;
+}
+
+.container {
+    min-width: 0;
 }
 
 .container1 {
@@ -71,6 +78,7 @@ body {
 
     .table {
         width: 100%;
+        min-width: 700px;
         height:auto;
         border-spacing: 0;
         text-align: left;

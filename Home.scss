@@ -2,6 +2,7 @@
 @use "mixins" as *;
 @use "header" as *;
 @use "footer" as *;
+// @use "base" as *;
 
 * {
   box-sizing: border-box;
@@ -9,6 +10,7 @@
 body {
   background: $bg-color;
   margin: 0;
+  @include page-layout;
 }
 p {
   color: $text-secondary-color;
@@ -50,8 +52,10 @@ h3 {
   h1 {
     color: $text-primary-color;
     font-family: $rubrik-font;
-    font-size: 80px;
-    align-self: flex-start;
+    font-size: $title-size;
+    align-self: center;
+    text-align: center;
+
     span {
       color: $button-color;
     }
@@ -60,7 +64,7 @@ h3 {
   p {
     color: $text-secondary-color;
     align-self: flex-start;
-    transform: translateY(-370px);
+    transform: translateY(-340px);
     font-size: 20px;
   }
   .child-btn {
@@ -175,43 +179,68 @@ h3 {
   .container {
     position: relative;
     .wrapper-1{
-        width: 100%;
+      display: flex;  
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      min-height: 500px;
     }
 
     h1 {
-      align-self: center;
-      justify-self: center;
-      font-size: 100px;
+      @include title ($fontWeight: 700, $fontSize: 2rem);
+      align-self: flex-start;
+      text-align: center;
+      margin-top: 70px;
     }
     p {
-      align-self: center;
-      justify-self: center;
-      transform: translateY(-490px);
+      transform: translateY(-250px);
     }
     .child-btn {
       flex-direction: row;
       justify-content: space-around;
     }
     .child {
-      
-      width: 100%;
+      width: 50%;
       height: 400px;
+      margin-left: 200px;
+    }
+  }
+  .container-1 {
+     background-color: $box-color;
+
+    h2 {
+      padding: 10px;
     }
   }
   .pop-pass {
     flex-direction: row;
+    flex: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+   
+
     h2 {
-      flex-direction: column;
       
+      flex-direction: column;
+      font-size: $title-size;
+    }
+    a {
+      position: absolute;
+        left: 16px;
+        bottom: 30px;
+        margin: 0;
     }
    
 
     .child-1 {
       flex-direction: column;
       flex-wrap: wrap;
-      width: 200px;
+      flex: 1 1 160px;
+      min-width: 0;
       height: 200px;
       margin: 8px;
+      background-color: $bg-color;
       p {
         font-size: 12px;
       }
@@ -223,6 +252,10 @@ h3 {
   }
 }
 @include desktop {
+  .main-container {
+    @include container;        
+  } 
+
   .container {
     height: 600px;
     max-height: 1000px;
@@ -235,7 +268,8 @@ h3 {
       width: 100%;
     }
     h1 {
-      font-size: 120px;
+      font-size: $title-size-desktop;
+      text-align: left;
     }
     p {
       font-size: 20px;
@@ -244,9 +278,10 @@ h3 {
     }
     .child {
       max-width: 800px;
-      width: 500px;
+      width: 100%;
       max-height: 700px;
       height: 400px;
+      flex: 1;
 
       margin-right: 30px;
     }
@@ -311,11 +346,25 @@ h3 {
     }
   }
   .wrapped{
-    .child-2{
-        justify-content: flex-start;
-        align-items: flex-start;
+
+    .child-2{      
+      flex-direction: row;
+        justify-content: space-between;
+
+        h3 {
+          margin-left: 50px;
+        }
+
         p{
-            align-self: start;
+          position: relative;
+          top: 40px;
+          margin-right: auto;
+          margin-left: -280px;
+
+        }
+
+        .sec-btn {
+          margin-right: 50px;
         }
         
     }

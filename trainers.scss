@@ -2,8 +2,10 @@
 @use "mixins" as *;
 @use "header" as *;
 @use "footer" as *;
+// @use "base" as *;
 
 body {
+  @include page-layout;
   background: $bg-color;
   margin: 0;
 }
@@ -149,12 +151,16 @@ body {
   }
 }
 @include desktop {
+  .main-container {
+    @include container;        
+  } 
     .rubrik{
         h1{
             font-size: 4rem;
             line-height: 1.8;
             font-weight: 700;
             text-transform: uppercase;
+            margin-top: 10px;
         }
     }
   .container {

@@ -168,6 +168,10 @@ body footer {
   grid-area: footer;
 }
 
+.container {
+  min-width: 0;
+}
+
 .container1 {
   display: flex;
   flex-direction: column;
@@ -242,6 +246,7 @@ body footer {
 }
 .table-wrapper .table {
   width: 100%;
+  min-width: 700px;
   height: auto;
   border-spacing: 0;
   text-align: left;
