@@ -64,8 +64,8 @@ header .logo {
 header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
-  font-size: 30px; /*changed from 30px*/
-  font-weight: 600; /*added*/
+  font-size: 30px;
+  font-weight: 600;
   margin: 0;
 }
 header .logo svg {
@@ -109,8 +109,8 @@ header nav {
   color: #C9CCD3;
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
-  padding: 25px; /* 10px 0px;*/
-  margin-top: 50px; /*100px*/
+  padding: 25px;
+  margin-top: 50px;
 }
 .footer address {
   align-self: center;
@@ -179,6 +179,7 @@ h1, h2 {
   font-family: "Barlow Condensed", sans-serif;
   color: #F2F3F5;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 700;
   line-height: 1.8;
   margin-block: 0;
@@ -198,6 +199,7 @@ h2 {
 .contact-info__address {
   line-height: 1.8;
   margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 .contact-info__opening {
   margin-top: 1rem;
@@ -229,6 +231,7 @@ h2 {
 }
 .contact-form h2 {
   font-size: 1.5rem;
+  text-align: left;
 }
 .contact-form__form {
   display: flex;
@@ -268,6 +271,12 @@ h2 {
   }
   .contact-info h1 {
     margin-left: 1rem;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #F2F3F5;
+    text-transform: uppercase;
   }
   .contact-info__address {
     margin-left: 1rem;
@@ -277,6 +286,9 @@ h2 {
   }
   .contact-info__map {
     width: 98%;
+  }
+  .contact-info h2 {
+    text-align: left;
   }
   .contact-form__option {
     border: solid 1px #2A2E37;
@@ -298,9 +310,12 @@ h2 {
   }
   main h1 {
     font-size: 4rem;
+    margin-top: -10px;
+    text-align: left;
   }
   main h2 {
     font-size: 2.5rem;
+    text-align: left;
   }
   main .contact-info {
     display: grid;

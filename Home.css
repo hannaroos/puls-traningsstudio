@@ -64,8 +64,8 @@ header .logo {
 header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
-  font-size: 30px; /*changed from 30px*/
-  font-weight: 600; /*added*/
+  font-size: 30px;
+  font-weight: 600;
   margin: 0;
 }
 header .logo svg {
@@ -109,8 +109,8 @@ header nav {
   color: #C9CCD3;
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
-  padding: 25px; /* 10px 0px;*/
-  margin-top: 50px; /*100px*/
+  padding: 25px;
+  margin-top: 50px;
 }
 .footer address {
   align-self: center;
@@ -147,6 +147,19 @@ header nav {
 body {
   background: #14161B;
   margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  grid-area: header;
+}
+body .container {
+  grid-area: main;
+}
+body footer {
+  grid-area: footer;
 }
 
 p {
@@ -189,8 +202,9 @@ h3 {
 .container h1 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 80px;
-  align-self: flex-start;
+  font-size: 2rem;
+  align-self: center;
+  text-align: center;
 }
 .container h1 span {
   color: #FF7A3D;
@@ -198,7 +212,7 @@ h3 {
 .container p {
   color: #C9CCD3;
   align-self: flex-start;
-  transform: translateY(-370px);
+  transform: translateY(-340px);
   font-size: 20px;
 }
 .container .child-btn {
@@ -309,38 +323,65 @@ h3 {
     position: relative;
   }
   .container .wrapper-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
+    min-height: 500px;
   }
   .container h1 {
-    align-self: center;
-    justify-self: center;
-    font-size: 100px;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #F2F3F5;
+    text-transform: uppercase;
+    align-self: flex-start;
+    text-align: center;
+    margin-top: 70px;
   }
   .container p {
-    align-self: center;
-    justify-self: center;
-    transform: translateY(-490px);
+    transform: translateY(-250px);
   }
   .container .child-btn {
     flex-direction: row;
     justify-content: space-around;
   }
   .container .child {
-    width: 100%;
+    width: 50%;
     height: 400px;
+    margin-left: 200px;
+  }
+  .container-1 {
+    background-color: #1C1F26;
+  }
+  .container-1 h2 {
+    padding: 10px;
   }
   .pop-pass {
     flex-direction: row;
+    flex: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
   }
   .pop-pass h2 {
     flex-direction: column;
+    font-size: 2rem;
+  }
+  .pop-pass a {
+    position: absolute;
+    left: 16px;
+    bottom: 30px;
+    margin: 0;
   }
   .pop-pass .child-1 {
     flex-direction: column;
     flex-wrap: wrap;
-    width: 200px;
+    flex: 1 1 160px;
+    min-width: 0;
     height: 200px;
     margin: 8px;
+    background-color: #14161B;
   }
   .pop-pass .child-1 p {
     font-size: 12px;
@@ -351,6 +392,11 @@ h3 {
   }
 }
 @media (min-width: 1024px) {
+  .main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
   .container {
     height: 600px;
     max-height: 1000px;
@@ -363,7 +409,8 @@ h3 {
     width: 100%;
   }
   .container h1 {
-    font-size: 120px;
+    font-size: 4rem;
+    text-align: left;
   }
   .container p {
     font-size: 20px;
@@ -372,9 +419,10 @@ h3 {
   }
   .container .child {
     max-width: 800px;
-    width: 500px;
+    width: 100%;
     max-height: 700px;
     height: 400px;
+    flex: 1;
     margin-right: 30px;
   }
   .container .child-btn {
@@ -428,10 +476,19 @@ h3 {
     color: #C9CCD3;
   }
   .wrapped .child-2 {
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .wrapped .child-2 h3 {
+    margin-left: 50px;
   }
   .wrapped .child-2 p {
-    align-self: start;
+    position: relative;
+    top: 40px;
+    margin-right: auto;
+    margin-left: -280px;
+  }
+  .wrapped .child-2 .sec-btn {
+    margin-right: 50px;
   }
 }/*# sourceMappingURL=Home.css.map */

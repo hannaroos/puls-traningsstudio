@@ -64,8 +64,8 @@ header .logo {
 header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
-  font-size: 30px; /*changed from 30px*/
-  font-weight: 600; /*added*/
+  font-size: 30px;
+  font-weight: 600;
   margin: 0;
 }
 header .logo svg {
@@ -109,8 +109,8 @@ header nav {
   color: #C9CCD3;
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
-  padding: 25px; /* 10px 0px;*/
-  margin-top: 50px; /*100px*/
+  padding: 25px;
+  margin-top: 50px;
 }
 .footer address {
   align-self: center;
@@ -139,6 +139,21 @@ header nav {
   .footer div {
     display: unset;
   }
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  grid-area: header;
+}
+body .container {
+  grid-area: main;
+}
+body footer {
+  grid-area: footer;
 }
 body {
   background: #14161B;
@@ -278,11 +293,17 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
   .rubrik h1 {
     font-size: 4rem;
     line-height: 1.8;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top: 10px;
   }
   .container {
     flex-direction: row;
