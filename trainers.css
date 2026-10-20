@@ -141,6 +141,21 @@ header nav {
   }
 }
 body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  grid-area: header;
+}
+body .container {
+  grid-area: main;
+}
+body footer {
+  grid-area: footer;
+}
+body {
   background: #14161B;
   margin: 0;
 }
@@ -278,6 +293,11 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
   .rubrik h1 {
     font-size: 4rem;
     line-height: 1.8;
