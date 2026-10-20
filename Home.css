@@ -398,6 +398,7 @@ h3 {
   }
   .container-1 .pop-pass h2 {
     flex-direction: column;
+    font-size: 2, 25rem;
   }
   .container-1 .pop-pass a {
     position: absolute;
@@ -421,5 +422,12 @@ h3 {
   .container-1 .pop-pass .child-1 .hidden {
     display: contents;
     color: #C9CCD3;
+  }
+  .wrapped .child-2 {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .wrapped .child-2 p {
+    align-self: start;
   }
 }/*# sourceMappingURL=Home.css.map */

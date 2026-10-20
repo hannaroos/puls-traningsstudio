@@ -200,6 +200,7 @@ h3 {
     flex-direction: row;
     h2 {
       flex-direction: column;
+      
     }
    
 
@@ -277,6 +278,7 @@ h3 {
       flex-direction: row;
       h2 {
         flex-direction: column;
+        
       }
       a{
         position: absolute;
@@ -304,6 +306,16 @@ h3 {
             
         }
       }
+    }
+  }
+  .wrapped{
+    .child-2{
+        justify-content: flex-start;
+        align-items: flex-start;
+        p{
+            align-self: start;
+        }
+        
     }
   }
 }
