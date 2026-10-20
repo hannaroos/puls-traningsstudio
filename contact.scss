@@ -165,7 +165,8 @@ h2 {
         "contact-info contact-form";
         
         h1{
-            font-size: $title-size-desktop
+            font-size: $title-size-desktop;
+            margin-top: -10px;
         }
 
         h2 {
