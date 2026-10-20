@@ -308,27 +308,14 @@ header .logo {
 header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
-<<<<<<< HEAD
-  position: absolute;
-  top: -5px; /*changed from -10 to 25 */
-  left: 60px;
-  font-size: 25px; /*changed from 30px*/
-=======
   font-size: 30px; /*changed from 30px*/
->>>>>>> origin/main
   font-weight: 600; /*added*/
   margin: 0;
 }
 header .logo svg {
   color: #FF7A3D;
-<<<<<<< HEAD
-  position: absolute;
-  top: 25px; /*changed from 25px*/
-  width: 80px; /*changed from 60 to 80*/
-=======
   width: 2.5rem;
   height: 2.5rem;
->>>>>>> origin/main
 }
 
 header nav {

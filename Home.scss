@@ -173,6 +173,7 @@ h3 {
 }
 @include tablet {
   .container {
+    position: relative;
     .wrapper-1{
         width: 100%;
     }

@@ -305,6 +305,9 @@ h3 {
 }
 
 @media (min-width: 768px) {
+  .container {
+    position: relative;
+  }
   .container .wrapper-1 {
     width: 100%;
   }
