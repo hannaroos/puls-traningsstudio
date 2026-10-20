@@ -52,8 +52,10 @@ h3 {
   h1 {
     color: $text-primary-color;
     font-family: $rubrik-font;
-    font-size: 80px;
-    align-self: flex-start;
+    font-size: $title-size;
+    align-self: center;
+    text-align: center;
+
     span {
       color: $button-color;
     }
@@ -62,7 +64,7 @@ h3 {
   p {
     color: $text-secondary-color;
     align-self: flex-start;
-    transform: translateY(-370px);
+    transform: translateY(-340px);
     font-size: 20px;
   }
   .child-btn {

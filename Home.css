@@ -202,8 +202,9 @@ h3 {
 .container h1 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 80px;
-  align-self: flex-start;
+  font-size: 2rem;
+  align-self: center;
+  text-align: center;
 }
 .container h1 span {
   color: #FF7A3D;
@@ -211,7 +212,7 @@ h3 {
 .container p {
   color: #C9CCD3;
   align-self: flex-start;
-  transform: translateY(-370px);
+  transform: translateY(-340px);
   font-size: 20px;
 }
 .container .child-btn {
