@@ -188,9 +188,10 @@ h3 {
     }
 
     h1 {
-      font-size: $title-size-desktop;
+      @include title ($fontWeight: 700, $fontSize: 2rem);
       align-self: flex-start;
-      text-align: left;
+      text-align: center;
+      margin-top: 70px;
     }
     p {
       transform: translateY(-250px);
@@ -202,6 +203,7 @@ h3 {
     .child {
       width: 50%;
       height: 400px;
+      margin-left: 200px;
     }
   }
   .container-1 {

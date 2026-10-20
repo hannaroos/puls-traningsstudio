@@ -130,6 +130,7 @@ h2 {
         h1 {
             margin-left: 1rem;
             text-align: left;
+            @include title ($fontWeight: 700, $fontSize: 2rem);
         }
         
             &__address {
