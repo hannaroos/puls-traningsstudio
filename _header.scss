@@ -7,10 +7,12 @@ header {
     background-color: $bg-color;
     position: sticky;
     top:0;
+    z-index: 1000;
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 1px $border-p-color;
     height: 80px;
+    
     .nav-desktop{
         display: none;
         
@@ -68,7 +70,8 @@ header {
             color: $text-primary-color;
             font-family: $body-font; 
             font-size: 30px;   
-            font-weight: 600;  
+            font-weight: 600; 
+            margin: 0;
         }
         svg{
             color:$button-color ;    

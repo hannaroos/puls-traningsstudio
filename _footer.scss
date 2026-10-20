@@ -8,18 +8,21 @@
     color: $text-secondary-color;
     font-family: $body-font;
     border-top: solid 1px $border-p-color;
-    padding: 25px;               /* 10px 0px;*/
-    margin-top: 50px;            /*100px*/
+    padding: 25px;             
+    margin-top: 50px;            
+    
     address {
         align-self: center;
         line-height: 1.8;
     }
-    p {
+    &__title {
         font-family: $rubrik-font;
         text-transform: uppercase;
         color: $text-primary-color;
-        // margin-left: 10px; 
-     }
+        font-weight: 700;
+        font-size: 30px; 
+    }
+    
     a {
         color: $links-color;
     }

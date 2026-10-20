@@ -5,6 +5,7 @@
 
 body {
   background: $bg-color;
+  margin: 0;
 }
 .rubrik {
   margin-bottom: 20px;
@@ -12,6 +13,9 @@ body {
   h1 {
     color: $text-primary-color;
     font-family: $rubrik-font;
+    font-size: $title-size;
+    line-height: 1.8;
+    text-transform: uppercase;
   }
   p {
     color: $text-secondary-color;
@@ -42,9 +46,12 @@ body {
 
     .keyword {
       border-radius: $border-radius-prime;
-      border: 1px solid $text-secondary-color;
+      border: 0.5px solid $text-secondary-color;
       color: $text-secondary-color;
       font-family: $body-font;
+      
+        
+      
     }
   }
   .child + .child {
@@ -53,6 +60,7 @@ body {
   h2 {
     color: $text-primary-color;
     font-family: $rubrik-font;
+    font-size: $subheading-size; 
   }
   p {
     color: $text-secondary-color;
@@ -61,6 +69,7 @@ body {
   h2 {
     color: $text-primary-color;
     font-family: $rubrik-font;
+    font-size: $subheading-size;
   }
   a {
     color: $links-color;
@@ -82,6 +91,7 @@ body {
     h2 {
       color: $text-primary-color;
       font-family: $rubrik-font;
+      
     }
     p {
       color: $text-secondary-color;
@@ -131,6 +141,9 @@ body {
         .btn {
             position: absolute;
             right: 10px;
+            width: 200px;
+            height: 50px;
+            top: -10px;
         }
     }
   }
@@ -138,7 +151,10 @@ body {
 @include desktop {
     .rubrik{
         h1{
-            font-size: 50px;
+            font-size: 4rem;
+            line-height: 1.8;
+            font-weight: 700;
+            text-transform: uppercase;
         }
     }
   .container {
@@ -147,6 +163,11 @@ body {
     .child {
       width: calc(33.33% - 10px);
       height: calc(20% - 10px);
+      .keyword{
+        display: inline-block;
+        font-size: 13px;
+        transform: translateY(-10px);
+      }
     }
 
     

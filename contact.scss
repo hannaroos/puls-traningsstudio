@@ -2,12 +2,15 @@
 @use "mixins" as *;
 @use "header" as *;
 @use "footer" as *;
+@use "base" as *;
 
 body {
+    @include page-layout;
     background-color: $bg-color;
     color: $text-secondary-color;
     font-family: $body-font;
-
+    margin: 0;
+    
         a {
             color: $links-color;
         }
@@ -16,10 +19,17 @@ h1, h2 {
     font-family: $rubrik-font;
     color: $text-primary-color;
     text-transform: uppercase;
-    font-size: 2rem;
     font-weight: 700;
     line-height: 1.8;    
     margin-block: 0;
+}
+
+h1 {
+    font-size: $title-size;
+}
+
+h2 {
+    font-size: $subheading-size;
 }
 
 .contact-info {
@@ -142,7 +152,7 @@ h1, h2 {
 
 @include desktop1 {
     .container {
-        @include container
+        @include container;        
     }
 
     main {
@@ -155,11 +165,11 @@ h1, h2 {
         "contact-info contact-form";
         
         h1{
-            font-size: 4rem;
+            font-size: $title-size-desktop
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: $subheading-size-desktop;
         }
 
         .contact-info {

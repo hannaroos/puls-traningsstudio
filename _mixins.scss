@@ -1,11 +1,32 @@
 @use "variables.scss" as *;
 
+@mixin page-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";    
+
+    header {
+        grid-area: header;
+    }
+
+    .container {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}
 
 @mixin flex {
     display: flex;
     flex-direction: column;
 }
-@mixin title ($fontWeight: 600, $fontSize: 1.5rem) {
+@mixin title ($fontWeight: 700, $fontSize: 2rem) {
     font-size: $fontSize;
     font-weight: $fontWeight;
     font-family: $rubrik-font;
@@ -26,11 +47,6 @@
 @mixin table {
     color: $text-secondary-color;
     padding: $padding;
-}
-//mixin container för desktop
-@mixin container {
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 @mixin tablet {
@@ -58,6 +74,7 @@
 @mixin container {
     max-width: 1400px;
     margin: 0 auto;
+    width: 100%;
 }
 // mixin för gemensam knapp
 @mixin btn {    

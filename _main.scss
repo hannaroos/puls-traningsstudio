@@ -1,6 +1,12 @@
 @use "variables.scss" as *;
 @use "mixins.scss" as *;
 
+// En container för main till desktop
+
+.container {
+    @include container    
+}
+
 .container1 {
     @include flex;
     justify-content: flex-start;
@@ -31,7 +37,7 @@
         border-radius: $border-radius;
         gap: 1.5rem;
         h2 {
-            @include title;
+            @include title ($fontWeight: 700, $fontSize: 2.5rem);
         }
         p {
             @include text;
@@ -83,8 +89,8 @@
 .container3 {
     margin-top: 2rem;
     padding: $container-padding;
-    caption {
-        @include title;
+    h2 {
+        @include title ($fontWeight: 700, $fontSize: 2.5rem);
         margin-bottom: 1.5rem;
     }
     .table-wrapper{
@@ -112,15 +118,17 @@
             }
         }
     } 
-}       
+}  
+
 .container4 {
     @include flex;
     margin: 1.9rem;
     gap: $gap;
     h2 {
-        @include title;
+        @include title ($fontWeight: 700, $fontSize: 2.5rem);
         margin-bottom: 1rem;
     }    
+
     details {
         height: fit-content;
         width: 100%;
@@ -149,20 +157,13 @@
         }
     }
 }    
-@include tablet {
+@include tablet1 {
     .container1{
         h1{
-            font-size: $title-size;
+            
+            @include title ($fontWeight: 700, $fontSize: 2rem);
         }
-        p{
-            font-size: 1.3rem;
-        }
-    }
-
-    .container2{
-        h2 {
-            font-size: $subheading-size;
-        }
+       
         p{
             font-size: 1.3rem;
         }
@@ -171,9 +172,18 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         h2 {
+            @include title ($fontWeight: 700, $fontSize: 2rem);
             font-size: $subheading-size;
         }
         p{
+            font-size: 1.3rem;
+        }
+    }
+    .container3{
+        h2{
+            @include title ($fontWeight: 700, $fontSize: 2rem);
+        }
+        th, td{
             font-size: 1.3rem;
         }
     }
