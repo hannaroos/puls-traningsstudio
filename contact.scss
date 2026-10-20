@@ -4,11 +4,12 @@
 @use "footer" as *;
 
 body {
+    @include page-layout;
     background-color: $bg-color;
     color: $text-secondary-color;
     font-family: $body-font;
     margin: 0;
-
+    
         a {
             color: $links-color;
         }
@@ -150,7 +151,7 @@ h2 {
 
 @include desktop1 {
     .container {
-        @include container
+        @include container;        
     }
 
     main {
