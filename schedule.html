@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Schema-sida-puls-träningsstudio</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"/>
+            </svg>
+            <p>PULS</p>
+        </div>
+        <nav>
+            <details>
+                <summary>Meny ☰</summary>
+                <a href="index.html">Start</a>
+                <a href="schedule.html" aria-current="page">Schema</a>
+                <a href="membership.html">Medlemsskap</a>
+                <a href="trainers.html">Tränare</a>
+                <a href="contact.html">Kontakt</a>
+            </details>
+            <div class="nav-desktop">
+                <a href="index.html">Start</a>
+                <a href="schedule.html" aria-current="page">Schema</a>
+                <a href="membership.html" >Medlemsskap</a>
+                <a href="trainers.html">Tränare</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section>
+                <div class="container1">
+                    <h1>SCHEMA</h1>
+                    <p>Vecka 42. Boka pass i appen eller i receptionen.</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="container2">
+                    <p><span class="item hög">H</span>Hög intensitet</p>
+                    <p><span class="item medel">M</span>Medel</p>
+                    <p><span class="item läg">L</span>Låg intensitet</p>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table">
+                    <caption class="table-title">GRUPPTRÄNING MÅNDAG-FREDAG</caption>
+                    <thead>
+                        <tr>
+                            <th>Tid</th>
+                            <th>Måndag</th>
+                            <th>Tisdag</th>
+                            <th>Onsdag</th>
+                            <th>Torsdag</th>
+                            <th>Fredag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>06:30</td>
+                            <td>Puls HIIT<span class="orange">(H)</span></td>
+                            <td>Cykel<span class="blue">(M)</span></td>
+                            <td>Puls HIIT<span class="orange">(H)</span></td>
+                            <td>Cykel<span class="blue">(M)</span></td>
+                            <td>Rörlighet<span class="green">(L)</span></td>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                            <td>Rörlighet<span class="green">(L)</span></td>
+                            <td>Styrka bas<span class="blue">(M)</span></td>
+                            <td>Rörlighet<span class="green">(L)</span></td>
+                            <td>Styrka bas<span class="blue">(M)</span></td>
+                            <td>Puls HIIT<span class="orange">(H)</span></td>
+                        </tr>
+                        <tr>
+                            <td>17:30</td>
+                            <td>Styrka bas<span class="blue">(M)</span></td>
+                            <td>Puls HIIT<span class="orange">(H)</span></td>
+                            <td>Cykel<span class="blue">(M)</span></td>
+                            <td>Puls HIIT<span class="orange">(H)</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>18:30</td>
+                            <td>Cykel<span class="blue">(M)</span></td>
+                            <td>Rörlighet<span class="green">(L)</span></td>
+                            <td>Styrka bas<span class="blue">(M)</span></td>
+                            <td>Rörlighet<span class="green">(L)</span></td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>   
+
+        <section class="info">        
+            <p>Helgpass: lördag 10:00 Puls HIIT och söndag 10:00 Rörlighet.</p>
+        </section>
+
+    </main>
+</div>
+
+<footer class="footer">
+    <h2>Puls träningsstudio</h2>
+    <address>
+        Industrigatan 18, 123 45 Hamnstad<br>
+        <a href="tel:0107654321">010-765 43 21</a>
+    </address>
+    <div>
+        <p>Bemannat vardagar 06-21</p>
+        <p>Öppet för medlemmar 05-23</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
+                
+                

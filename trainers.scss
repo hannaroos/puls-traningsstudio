@@ -5,6 +5,7 @@
 
 body {
   background: $bg-color;
+  margin: 0;
 }
 .rubrik {
   margin-bottom: 20px;
@@ -12,6 +13,9 @@ body {
   h1 {
     color: $text-primary-color;
     font-family: $rubrik-font;
+    font-size: $title-size;
+    line-height: 1.8;
+    text-transform: uppercase;
   }
   p {
     color: $text-secondary-color;
@@ -56,6 +60,7 @@ body {
   h2 {
     color: $text-primary-color;
     font-family: $rubrik-font;
+    font-size: $subheading-size; 
   }
   p {
     color: $text-secondary-color;
@@ -64,6 +69,7 @@ body {
   h2 {
     color: $text-primary-color;
     font-family: $rubrik-font;
+    font-size: $subheading-size;
   }
   a {
     color: $links-color;
@@ -85,6 +91,7 @@ body {
     h2 {
       color: $text-primary-color;
       font-family: $rubrik-font;
+      
     }
     p {
       color: $text-secondary-color;
@@ -144,7 +151,10 @@ body {
 @include desktop {
     .rubrik{
         h1{
-            font-size: 50px;
+            font-size: 4rem;
+            line-height: 1.8;
+            font-weight: 700;
+            text-transform: uppercase;
         }
     }
   .container {

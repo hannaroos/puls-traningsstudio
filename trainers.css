@@ -55,27 +55,42 @@ header nav a {
 }
 header .logo {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  padding: 1rem;
+  gap: 5px;
 }
 header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
+<<<<<<< HEAD
   position: absolute;
   top: -5px; /*changed from -10 to 25 */
   left: 60px;
   font-size: 25px; /*changed from 30px*/
+=======
+  font-size: 30px; /*changed from 30px*/
+>>>>>>> origin/main
   font-weight: 600; /*added*/
+  margin: 0;
 }
 header .logo svg {
   color: #FF7A3D;
+<<<<<<< HEAD
   position: absolute;
   top: 25px; /*changed from 25px*/
   width: 80px; /*changed from 60 to 80*/
+=======
+  width: 2.5rem;
+  height: 2.5rem;
+>>>>>>> origin/main
 }
 
 header nav {
   align-items: center;
-  margin-top: 4px; /*changed from 20px to 4px*/
-  padding: 20px; /*added*/
+  margin-top: 4px;
+  padding: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -88,14 +103,11 @@ header nav {
   header nav .nav-desktop a {
     color: #F2F3F5;
     margin-right: 20px;
-    padding: 10px; /*added*/
-    font-weight: 500; /*added*/
+    padding: 10px;
+    font-weight: 500;
   }
   header nav .nav-desktop a:hover {
     color: #FF8F5C;
-  }
-  header nav .nav-desktop a {
-    /*added*/
   }
   header nav .nav-desktop a[aria-current=page] {
     color: #FF8F5C;
@@ -117,10 +129,12 @@ header nav {
   align-self: center;
   line-height: 1.8;
 }
-.footer h2 {
+.footer__title {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   color: #F2F3F5;
+  font-weight: 700;
+  font-size: 30px;
 }
 .footer a {
   color: #FF8F5C;
@@ -141,6 +155,7 @@ header nav {
 }
 body {
   background: #14161B;
+  margin: 0;
 }
 
 .rubrik {
@@ -150,6 +165,9 @@ body {
 .rubrik h1 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
+  font-size: 2rem;
+  line-height: 1.8;
+  text-transform: uppercase;
 }
 .rubrik p {
   color: #C9CCD3;
@@ -190,6 +208,7 @@ body {
 .container h2 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.5rem;
 }
 .container p {
   color: #C9CCD3;
@@ -198,6 +217,7 @@ body {
 .container h2 {
   color: #F2F3F5;
   font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.5rem;
 }
 .container a {
   color: #FF8F5C;
@@ -272,7 +292,10 @@ body {
 }
 @media (min-width: 1024px) {
   .rubrik h1 {
-    font-size: 50px;
+    font-size: 4rem;
+    line-height: 1.8;
+    font-weight: 700;
+    text-transform: uppercase;
   }
   .container {
     flex-direction: row;
