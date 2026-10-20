@@ -48,10 +48,6 @@
     color: $text-secondary-color;
     padding: $padding;
 }
-@mixin btn {
-    color: $text-primary-color;
-    background-color: $box-color;
-}
 
 @mixin tablet {
     @media (min-width: 768px) {

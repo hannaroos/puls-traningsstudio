@@ -64,8 +64,8 @@ header .logo {
 header .logo p {
   color: #F2F3F5;
   font-family: "Barlow", sans-serif;
-  font-size: 30px; /*changed from 30px*/
-  font-weight: 600; /*added*/
+  font-size: 30px;
+  font-weight: 600;
   margin: 0;
 }
 header .logo svg {
@@ -109,8 +109,8 @@ header nav {
   color: #C9CCD3;
   font-family: "Barlow", sans-serif;
   border-top: solid 1px #2A2E37;
-  padding: 25px; /* 10px 0px;*/
-  margin-top: 50px; /*100px*/
+  padding: 25px;
+  margin-top: 50px;
 }
 .footer address {
   align-self: center;
@@ -140,6 +140,16 @@ header nav {
     display: unset;
   }
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #14161B;
+}
+
 body {
   min-height: 100vh;
   display: grid;
