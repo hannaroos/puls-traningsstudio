@@ -197,7 +197,7 @@ h3 {
   transform: translateY(2rem);
 }
 .container .child p {
-  transform: translateY(100px);
+  transform: translateY();
 }
 .container h1 {
   color: #F2F3F5;
@@ -331,7 +331,7 @@ h3 {
     min-height: 500px;
   }
   .container h1 {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 700;
     font-family: "Barlow Condensed", sans-serif;
     color: #F2F3F5;
@@ -339,13 +339,17 @@ h3 {
     align-self: flex-start;
     text-align: center;
     margin-top: 70px;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
   }
   .container p {
-    transform: translateY(-250px);
+    padding: 0.5rem;
+    margin-top: 8rem;
   }
   .container .child-btn {
     flex-direction: row;
     justify-content: space-around;
+    margin-top: -150px;
   }
   .container .child {
     width: 50%;
@@ -369,7 +373,6 @@ h3 {
     font-size: 2rem;
   }
   .pop-pass a {
-    position: absolute;
     left: 16px;
     bottom: 30px;
     margin: 0;
@@ -414,11 +417,11 @@ h3 {
   }
   .container p {
     font-size: 20px;
-    transform: translateY(-80px);
+    padding-top: 4rem;
     align-self: start;
   }
   .container .child {
-    max-width: 800px;
+    max-width: 500px;
     width: 100%;
     max-height: 700px;
     height: 400px;
@@ -430,7 +433,7 @@ h3 {
     width: 100%;
     align-self: flex-start;
     justify-content: flex-start;
-    margin-top: -50px;
+    margin-top: -300px;
   }
   .container .child-btn button {
     max-width: 300px;

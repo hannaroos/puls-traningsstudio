@@ -206,7 +206,7 @@ body {
 
 @media (min-width: 576px) and (max-width: 992px) {
   .container1 h1 {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 700;
     font-family: "Barlow Condensed", sans-serif;
     color: #F2F3F5;
@@ -251,6 +251,11 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
   .container1 h1 {
     font-size: 4rem;
     align-self: flex-start;
